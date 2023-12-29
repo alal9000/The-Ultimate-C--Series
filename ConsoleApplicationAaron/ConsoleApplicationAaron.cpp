@@ -1,10 +1,11 @@
 #include <iostream>
 
 int main() {
-	int file_size; // Snake Case
-	int FileSize; // Pascal Case
-	int fileSize; // Camel Case
+	int x = 10;
+	// int y = x++; // x = 11, y = 10
+	int z = ++x; // x = 11, z = 11
 
+	std::cout << x;
 
 	return 0;
 
