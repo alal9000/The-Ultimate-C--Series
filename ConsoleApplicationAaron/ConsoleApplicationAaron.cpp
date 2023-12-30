@@ -1,11 +1,13 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 
 using namespace std;
 
 int main() {
-	short number = 100;
-	int another = number;
-	cout << another;
+	srand(time(0));
+	int number = rand() % 10;
+	cout << number;
 	return 0;
 }
