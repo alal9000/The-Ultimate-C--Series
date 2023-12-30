@@ -4,8 +4,14 @@
 using namespace std;
 
 int main() {
-	double result = pow(2, 3);
-	cout << result;
+	double radius;
+	const double pi = 3.141592654;
+
+	cout << "Input the radius of a circle: ";
+	cin >> radius;
+
+	double area = (radius * radius) * pi;
+	cout << area;
 
 	return 0;
 }
