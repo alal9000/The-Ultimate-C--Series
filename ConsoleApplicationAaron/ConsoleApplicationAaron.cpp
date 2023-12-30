@@ -4,7 +4,8 @@
 using namespace std;
 
 int main() {
-	int number = 0;
-	number--;
-	cout << number;
+	short number = 100;
+	int another = number;
+	cout << another;
+	return 0;
 }
