@@ -4,16 +4,17 @@ using namespace std;
 
 int main() {
 
-	int sales = 95000;
-	const int state_tax_percent = 4;
-	const int county_tax_percent = 2;
+	double sales = 95000;
+	cout << "Sales $" << sales << endl;
 
-	double state_tax = (state_tax_percent / 100.0) * sales;
-	double county_tax = (county_tax_percent / 100.0) * sales;
-	double total_tax = state_tax + county_tax;
+	const double stateTaxRate = .04;
+	double stateTax = sales * stateTaxRate;
+	cout << "State Tax $" << stateTax << endl;
 
-	cout << "sales " << sales << endl
-		<< "state_tax " << state_tax << endl
-		<< "county_tax " << county_tax << endl
-		<< "total_tax " << total_tax;
+	const double countyTaxRate = .02;
+	double countyTax = sales * countyTaxRate;
+	cout << "County Tax $" << countyTax << endl;
+
+	double totalTax = stateTax + countyTax;
+	cout << "Total tax $" << totalTax << endl;
 }
