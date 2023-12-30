@@ -6,11 +6,11 @@
 using namespace std;
 
 int main() {
+	const short minValue = 1;
+	const short maxValue = 6;
 	srand(time(0));
-	int maxValue = 6;
-	int minValue = 1;
-	int number = (rand() % (maxValue - minValue + 1)) + minValue;
-	cout << maxValue;
-	cout << minValue;
+	short first = (rand() % (maxValue - minValue + 1)) + minValue;
+	short second = (rand() % (maxValue - minValue + 1)) + minValue;
+	cout << first << ", " << second;
 	return 0;
 }
