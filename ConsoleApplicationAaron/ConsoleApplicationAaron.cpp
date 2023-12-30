@@ -3,12 +3,15 @@
 using namespace std;
 
 int main() {
-	double x;
-	double y;
+	double fahrenheit;
+	double celsius;
 
-	cout << "Enter values for x and y: ";
-	cin >> x >> y;
-	cout << x + y;
+	cout << "Enter fahrenheit: ";
+	cin >> fahrenheit;
+
+	celsius = (fahrenheit - 32) * 5 / 9;
+
+	cout << "Celsius is: " << celsius;
 
 	return 0;
 }
