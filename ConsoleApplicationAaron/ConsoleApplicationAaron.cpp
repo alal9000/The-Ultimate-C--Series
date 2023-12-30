@@ -1,16 +1,11 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int main() {
-	cout << "Fahrenheit: ";
-	int fahrenheit;
-
-	cin >> fahrenheit;
-
-	double celsius = (fahrenheit - 32) / 1.8;
-
-	cout << celsius;
+	double result = pow(2, 3);
+	cout << result;
 
 	return 0;
 }
