@@ -1,18 +1,14 @@
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
+#include <iomanip>
 
 
 using namespace std;
 
 int main() {
-	int x = 5; // stores the integer 5 in memory location x
-	int* y = &x; // y is a pointer which can hold the memory address of an integer, in this case x
+	cout << left; 
+	cout << setw(10) << "Spring" << setw(10) << "Nice" << endl
+		 << setw(10) << "Summer" << setw(10) << "Hot" << endl;
 
-	int* z = static_cast<int*>(malloc(sizeof(int)));
-
-	int* a = z;
-
-	cout << *z;
-	return 0;
+	cout << fixed << setprecision(10) << 12.34567 << endl
+		 << 22.123456;
 }
