@@ -6,31 +6,33 @@ using namespace std;
 
 int main() {
 
-	//int sales = 11'000;
-	//double commission = (sales > 10'000) ? .1 : 0.5;
+	cout << "1- create account" << endl
+		<< "2- Change password" << endl
+		<< "3- Quit" << endl
+		<< "Select an option: ";
 
-	//cout << commission;
+	short input;
+	cin >> input;
 
-	// ex - my implementation
+	switch (input) {
+		case 1:
+			cout << "You selected 1";
+			break;
 
-	int number1;
-	int number2;
-	int number3;
+		case 2:
+			cout << "You selected 2";
+			break;
 
-	cout << "enter number 1: ";
-	cin >> number1;
+		case 3:
+			cout << "You selected 3";
+			break;
+		default:
+			cout << "Goodbye!";
+	}
 
-	cout << "enter number 2: ";
-	cin >> number2;
+	
 
-	//if (number1 > number2)
-	//	number3 = number1;
-	//else
-	//	number3 = number2;
-
-	number3 = (number1 > number2) ? number1 : number2;
-
-	cout << "The largest value is: " << number3 << endl;
+	
 
 
 	return 0;
