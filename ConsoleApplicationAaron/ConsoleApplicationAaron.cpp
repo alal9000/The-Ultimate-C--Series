@@ -6,42 +6,16 @@ using namespace std;
 
 int main() {
 
-	//int temp = 100;
+	bool isCitizen = true;
+	bool caResident = true;
+	short tuition = 0;
 
-	//if (temp < 60)
-	//	cout << "Cold" << endl;
-	//else if (temp < 90)
-	//	cout << "Nice";
-	//else
-	//	cout << "Hot";
 
-	// exercise - my implementation
+	if (isCitizen) {
+		if (!caResident) tuition = 1000;
+	}
+	else tuition = 3000;
 
-	//int sales = 15'020;
-	//int commission;
-
-	//if (sales < 10'000)
-	//	commission = 10;
-	//else if (sales <= 15'000)
-	//	commission = 15;
-	//else
-	//	commission = 20;
-
-	//cout << commission;
-
-	// exercise - mosh implementation
-
-	int sales = 50'000;
-	double commission;
-
-	if (sales <= 10'000)
-		commission = .1;
-	else if (sales <= 15'000)
-		commission = .15;
-	else
-		commission = .2;
-
-	cout << commission;
 
 
 	return 0;
