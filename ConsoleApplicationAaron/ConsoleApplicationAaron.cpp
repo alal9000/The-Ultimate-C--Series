@@ -6,24 +6,42 @@ using namespace std;
 
 int main() {
 
-	//bool a = true;
-	//bool b = false;
-	//bool c = false;
-	//bool result = (a || b) && c;
+	//int temp = 100;
 
-	//cout << boolalpha << result;
+	//if (temp < 60)
+	//	cout << "Cold" << endl;
+	//else if (temp < 90)
+	//	cout << "Nice";
+	//else
+	//	cout << "Hot";
 
-	// exercise
+	// exercise - my implementation
 
-	bool isCitizen = false;
-	bool hasBachelorsDegree = true;
-	short yearsWorkExperience = 10;
+	//int sales = 15'020;
+	//int commission;
 
-	bool isEligible = isCitizen && (hasBachelorsDegree || yearsWorkExperience >= 2);
+	//if (sales < 10'000)
+	//	commission = 10;
+	//else if (sales <= 15'000)
+	//	commission = 15;
+	//else
+	//	commission = 20;
 
-	cout << boolalpha << isEligible;
+	//cout << commission;
 
+	// exercise - mosh implementation
 
+	int sales = 50'000;
+	double commission;
+
+	if (sales <= 10'000)
+		commission = .1;
+	else if (sales <= 15'000)
+		commission = .15;
+	else
+		commission = .2;
+
+	cout << commission;
 
 
 	return 0;
