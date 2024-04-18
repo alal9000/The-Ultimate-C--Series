@@ -5,9 +5,9 @@
 
 
 using namespace std;
+using messaging::greet;
 
 int main() {
-
 	greet("poop");
 
 
