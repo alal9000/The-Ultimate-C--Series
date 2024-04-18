@@ -5,14 +5,19 @@
 using namespace std;
 
 
-double calculateTax(double income, double expense, double taxRate = .2) {
-	return income * taxRate;
+void greet(string name) {
+	cout << "Hello " << name << endl;
+}
+
+void greet(string title, string name) {
+	cout << "Hello " << title << " " << name << endl;
 }
 
 int main() {
 
-	double tax = calculateTax(10'000, .3);
-	cout << tax;
+	greet("mosh");
+	greet("mr", "mosh");
+
 
 
 	return 0;
