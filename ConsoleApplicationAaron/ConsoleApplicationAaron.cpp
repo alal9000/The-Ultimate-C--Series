@@ -4,26 +4,23 @@
 
 using namespace std;
 
+// global variable - global scope
+double taxRate = .2;
 
-void increasePrice(double& price) {
-	price *= 1.2;
+double calculateTax(int sales) {
+	return sales * taxRate;
 }
 
-void greet(const string& name) {
-	cout << "Hello " << name << endl;
-}
+
 
 int main() {
+	// local variable - local scope
+	int sales = 10'000;
+	taxRate = 0;
+	double tax = calculateTax(sales);
+	cout << tax;
 
-	//double price = 100;
-	//increasePrice(price);
 
-	//cout << price;
-
-	string name = "Mosh";
-	greet(name);
-
-	cout << name;
 
 	return 0;
 
