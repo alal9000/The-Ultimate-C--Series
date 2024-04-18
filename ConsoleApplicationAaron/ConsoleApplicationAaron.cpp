@@ -5,20 +5,25 @@
 using namespace std;
 
 
-void greet(string name) {
-	cout << "Hello " << name << endl;
+void increasePrice(double& price) {
+	price *= 1.2;
 }
 
-void greet(string title, string name) {
-	cout << "Hello " << title << " " << name << endl;
+void greet(const string& name) {
+	cout << "Hello " << name << endl;
 }
 
 int main() {
 
-	greet("mosh");
-	greet("mr", "mosh");
+	//double price = 100;
+	//increasePrice(price);
 
+	//cout << price;
 
+	string name = "Mosh";
+	greet(name);
+
+	cout << name;
 
 	return 0;
 
