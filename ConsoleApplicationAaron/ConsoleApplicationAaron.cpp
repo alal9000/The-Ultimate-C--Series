@@ -1,28 +1,29 @@
 #include <iostream>
 #include <string>
+
+
 using namespace std;
 
 
+void greet(string name) {
+	cout << "Hello " << name << endl;
+}
+
+string fullName(string firstName, string lastName) {
+	return firstName + " " + lastName;
+}
+
 int main() {
 
-	//for (int x = 1; x <= 5; x++) {
-	//	for (int y = 1; y <= 5; y++)
-	//		cout << "(" << x << ", " << y << ")" << endl;
-	//}
+	//greet("Mosh", "Hamedani");
 
-	// ex
 
-	int rows;
-	cout << "Rows: ";
-	cin >> rows;
+	//cout << name << endl;
 
-	for (int i = 0; i < rows; i++) {
-		
-		for (int j = 0; j < i + 1; j++) {
-			cout << "*";
-		}
-		cout << endl;
-	}
+	greet(fullName("Mosh", "Hamedani"));
+
+	cout << "Done";
+
 
 
 	return 0;
