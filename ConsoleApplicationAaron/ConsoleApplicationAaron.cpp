@@ -1,11 +1,10 @@
 #include <iostream>
 #include <string>
+#include "greet.hpp"
+
 
 
 using namespace std;
-
-// function declaration
-void greet(string name);
 
 int main() {
 
@@ -18,7 +17,3 @@ int main() {
 
 }
 
-// function definition
-void greet(string name) {
-	cout << "Hello " << name;
-}
