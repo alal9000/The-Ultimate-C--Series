@@ -4,26 +4,21 @@
 
 using namespace std;
 
-// global variable - global scope
-double taxRate = .2;
-
-double calculateTax(int sales) {
-	return sales * taxRate;
-}
-
-
+// function declaration
+void greet(string name);
 
 int main() {
-	// local variable - local scope
-	int sales = 10'000;
-	taxRate = 0;
-	double tax = calculateTax(sales);
-	cout << tax;
 
+	greet("poop");
 
 
 	return 0;
 
 
 
+}
+
+// function definition
+void greet(string name) {
+	cout << "Hello " << name;
 }
