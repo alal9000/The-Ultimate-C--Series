@@ -1,28 +1,31 @@
 #include <iostream>
 #include <string>
-
-
 using namespace std;
+
 
 int main() {
 
-	//for (int i = 1; i <= 5; i++)
-	//{
-	//	if (i % 3 == 0)
-	//		break;
-	//	cout << i << endl;
-
+	//for (int x = 1; x <= 5; x++) {
+	//	for (int y = 1; y <= 5; y++)
+	//		cout << "(" << x << ", " << y << ")" << endl;
 	//}
 
-	while (true) {
-		cout << "Number: ";
-		int number;
-		cin >> number;
-		if (number >= 1 && number <= 5)
-			break;
-		cout << "Error! Enter a number between 1 and 5" << endl;
+	// ex
+
+	int rows;
+	cout << "Rows: ";
+	cin >> rows;
+
+	for (int i = 0; i < rows; i++) {
+		
+		for (int j = 0; j < i + 1; j++) {
+			cout << "*";
+		}
+		cout << endl;
 	}
 
+
+	return 0;
 
 
 
