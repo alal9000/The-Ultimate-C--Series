@@ -2,30 +2,37 @@
 
 using namespace std;
 
+void increasePrice(double* price) {
+	*price *= 1.2;
+}
 
+// ex - my solution same as mosh
+void swap(int* first, int* second) {
+	int temp;
+	temp = *first;
+	*first = *second;
+	*second = temp;
 
-
+}
 
 int main() {
+	//double price = 100;
 
-	// const variable but not pointer
-	//const int x = 10;
-	//const int* ptr = &x;
+	//increasePrice(&price);
+	//
+	//cout << price;
 
-	//int y = 20;
+	// ex - my solution same as mosh
 
-	//ptr = &y;
+	int x = 10;
+	int y = 20;
 
-	// constant pointer but not variable
-	//int x = 10;
-	//int* const ptr = &x;
+	swap(&x, &y);
 
-	//int y = 20;
-	//ptr = &y;
+	// should see 12 and 50 if working
+	cout << x << endl << y;
 
-	// both data and pointer are constant
-	const int x = 10;
-	const int* const ptr = &x;
+
 
 
 
