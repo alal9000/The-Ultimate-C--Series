@@ -2,17 +2,25 @@
 
 using namespace std;
 
+int linearSearch(int array[], int arraySize, int value) {
+	for (int i = 0; i < arraySize; i++) {
+		if (array[i] == value)
+			return i;
+
+	}
+	return -1;
+}
+
+// ex mine and mosh implementation
 
 int main() {
-	int values[3] = { 10, 20, 30 };
-	auto [x, y, z] = values;
 
+	int array[] = { 6, 5, 10, 2, 3, 4, 1, 9 };
 
-	//int x = values[0];
-	//int y = values[1];
-	//int z = values[2];
+	int index = linearSearch(array, size(array), 6);
 
-	cout << x << ", " << y << ", " << z;
+	cout << "Index is: " << index;
+	
 
 
 
