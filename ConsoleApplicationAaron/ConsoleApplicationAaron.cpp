@@ -4,12 +4,15 @@ using namespace std;
 
 
 int main() {
-	int numbers[] = { 10, 20, 30 };
+	int values[3] = { 10, 20, 30 };
+	auto [x, y, z] = values;
 
-	cout << numeric_limits<long long>::min() << endl;
-	cout << numeric_limits<long long>::max() << endl;
-	cout << numeric_limits<size_t>::min() << endl;
-	cout << numeric_limits<size_t>::max() << endl;
+
+	//int x = values[0];
+	//int y = values[1];
+	//int z = values[2];
+
+	cout << x << ", " << y << ", " << z;
 
 
 
