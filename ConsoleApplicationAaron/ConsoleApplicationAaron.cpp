@@ -2,15 +2,16 @@
 
 using namespace std;
 
-void printNumbers(int numbers[], int size) {
-	for (int i = 0; i < size; i++)
-		cout << numbers[i];
-}
 
 int main() {
 	int numbers[] = { 10, 20, 30 };
 
-	printNumbers(numbers, size(numbers));
+	cout << numeric_limits<long long>::min() << endl;
+	cout << numeric_limits<long long>::max() << endl;
+	cout << numeric_limits<size_t>::min() << endl;
+	cout << numeric_limits<size_t>::max() << endl;
+
+
 
 	return 0;
 
