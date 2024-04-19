@@ -2,36 +2,21 @@
 
 using namespace std;
 
-void increasePrice(double* price) {
-	*price *= 1.2;
-}
-
-// ex - my solution same as mosh
-void swap(int* first, int* second) {
-	int temp;
-	temp = *first;
-	*first = *second;
-	*second = temp;
+void printNumbers(int numbers[]) {
+	numbers[0] = 0;
 
 }
+
 
 int main() {
-	//double price = 100;
+	
+	int numbers[] = { 10, 20, 30 };
+	//int* ptr = numbers;
+	//cout << ptr[1];
 
-	//increasePrice(&price);
-	//
-	//cout << price;
+	printNumbers(numbers);
 
-	// ex - my solution same as mosh
-
-	int x = 10;
-	int y = 20;
-
-	swap(&x, &y);
-
-	// should see 12 and 50 if working
-	cout << x << endl << y;
-
+	cout << numbers[0];
 
 
 
