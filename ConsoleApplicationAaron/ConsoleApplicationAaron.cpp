@@ -8,27 +8,24 @@ using namespace std;
 
 int main() {
 
-	//int number = 10;
+	// const variable but not pointer
+	//const int x = 10;
+	//const int* ptr = &x;
 
-	//int* ptr = &number;
+	//int y = 20;
 
-	//*ptr = 20;
+	//ptr = &y;
 
-	////cout << *ptr;
+	// constant pointer but not variable
+	//int x = 10;
+	//int* const ptr = &x;
 
-	//cout << number;
+	//int y = 20;
+	//ptr = &y;
 
-	// ex
-	int x = 10;
-	int y = 20;
-	int* ptr = &x;
-	*ptr *= 2;
-	ptr = &y;
-	*ptr *= 3;
-
-	cout << x << endl << y;
-
-	
+	// both data and pointer are constant
+	const int x = 10;
+	const int* const ptr = &x;
 
 
 
