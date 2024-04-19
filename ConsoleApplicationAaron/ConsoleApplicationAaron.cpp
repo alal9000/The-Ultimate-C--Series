@@ -2,24 +2,32 @@
 
 using namespace std;
 
-int linearSearch(int array[], int arraySize, int value) {
-	for (int i = 0; i < arraySize; i++) {
-		if (array[i] == value)
-			return i;
 
-	}
-	return -1;
-}
 
-// ex mine and mosh implementation
+
 
 int main() {
 
-	int array[] = { 6, 5, 10, 2, 3, 4, 1, 9 };
+	//int number = 10;
 
-	int index = linearSearch(array, size(array), 6);
+	//int* ptr = &number;
 
-	cout << "Index is: " << index;
+	//*ptr = 20;
+
+	////cout << *ptr;
+
+	//cout << number;
+
+	// ex
+	int x = 10;
+	int y = 20;
+	int* ptr = &x;
+	*ptr *= 2;
+	ptr = &y;
+	*ptr *= 3;
+
+	cout << x << endl << y;
+
 	
 
 
