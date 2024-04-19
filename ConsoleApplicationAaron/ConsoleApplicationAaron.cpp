@@ -2,21 +2,20 @@
 
 using namespace std;
 
-void printNumbers(int numbers[]) {
-	numbers[0] = 0;
-
-}
-
 
 int main() {
 	
 	int numbers[] = { 10, 20, 30 };
-	//int* ptr = numbers;
-	//cout << ptr[1];
+	int* ptr = numbers;
+	//ptr++;
+	//ptr--;
+	// 100
 
-	printNumbers(numbers);
+	cout << *(ptr + 1);
+	cout << ptr[1];
+	cout << numbers[1];
 
-	cout << numbers[0];
+
 
 
 
