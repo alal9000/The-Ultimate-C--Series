@@ -2,35 +2,30 @@
 
 using namespace std;
 
-void swap(int numbers[], int i, int j) {
-	int temp = numbers[i];
-	numbers[i] = numbers[j];
-	numbers[j] = temp;
-}
+const int rows = 2;
+const int columns = 3;
 
-void bubbleSort(int numbers[], int size) {
-
-	for (int pass = 0; pass < size; pass++) {
-		for (int i = 1; i < size; i++) {
-			if (numbers[i] < numbers[i - 1])
-				swap(numbers, i, i - 1);
-
+void printMatrix(int matrix[rows][columns]) {
+	for (int row = 0; row < rows; row++) {
+		for (int column = 0; column < columns; column++) {
+			cout << matrix[row][column] << endl;
 		}
 	}
-
 
 }
 
 
 int main() {
-	// bubble sort ex
-	int numbers[] = { 1 };
 
-	bubbleSort(numbers, size(numbers));
+	// 2x3
+	int matrix[rows][columns] = {
+		{11, 12, 13},
+		{21, 22, 23}
+	};
 
-	for (int number : numbers) {
-		cout << number << endl;
-	}
+	printMatrix(matrix);
+	
+
 
 	return 0;
 
