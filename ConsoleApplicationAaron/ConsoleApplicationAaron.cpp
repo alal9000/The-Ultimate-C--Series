@@ -5,14 +5,11 @@ using namespace std;
 
 
 int main() {
-	//string price = "19.99";
-	//double price = stod("x19.99");
-	//price *= 1.2;
-	string str = to_string(19.99);
+	char ch = '\'';
+	string str = "\"Hello world\"";
 
-	//cout << price;
-	cout << str;
-
+	//cout << str;
+	cout << ch;
 	return 0;
 
 }
