@@ -4,19 +4,17 @@ using namespace std;
 
 
 int main() {
-	char name[50] = "Mosh";
-	char lastName[] = "Hamedani";
-
+	string name = "Mosh";
+	string another = "John";
 	//name[0] = 'm';
-	//cout << strlen(name);
-	//strcat(name, lastName);
+	//cout << name.length();
 
-	//strcpy(name, lastName);
+	//name += " Hamedani";
+	//if (name < another)
+		//cout << "Same";
 
-	if (strcmp(name, lastName) == 0)
-		cout << "Equal";
-
-	//cout << name;
+	cout << name.back();
+	//cout << another;
 
 	return 0;
 
