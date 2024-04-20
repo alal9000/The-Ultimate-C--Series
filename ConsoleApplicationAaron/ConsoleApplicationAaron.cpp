@@ -4,20 +4,19 @@ using namespace std;
 
 
 int main() {
-	// stack
-	//int numbers[1000];
-	int x;
+	char name[50] = "Mosh";
+	char lastName[] = "Hamedani";
 
-	// heap
-	int* numbers = new int[10];
-	int* number = new int;
-	delete number;
-	delete[] numbers;
+	//name[0] = 'm';
+	//cout << strlen(name);
+	//strcat(name, lastName);
 
-	number = nullptr;
-	numbers = nullptr;
+	//strcpy(name, lastName);
 
+	if (strcmp(name, lastName) == 0)
+		cout << "Equal";
 
+	//cout << name;
 
 	return 0;
 
