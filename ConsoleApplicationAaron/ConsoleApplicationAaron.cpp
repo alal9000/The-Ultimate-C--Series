@@ -5,17 +5,13 @@ using namespace std;
 
 int main() {
 	string name = "Mosh";
-	string another = "John";
-	//name[0] = 'm';
-	//cout << name.length();
+	//name.append(" Hamedani");
+	//name.insert(0, "I am ");
+	//name.erase(0, 2);
+	//name.clear();
+	name.replace(0, 2, "MO");
 
-	//name += " Hamedani";
-	//if (name < another)
-		//cout << "Same";
-
-	cout << name.back();
-	//cout << another;
-
+	cout << name;
 	return 0;
 
 }
