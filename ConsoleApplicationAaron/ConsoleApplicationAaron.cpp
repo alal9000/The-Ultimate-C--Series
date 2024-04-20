@@ -4,14 +4,14 @@ using namespace std;
 
 
 int main() {
-	string name = "Mosh";
-	//name.append(" Hamedani");
-	//name.insert(0, "I am ");
-	//name.erase(0, 2);
-	//name.clear();
-	name.replace(0, 2, "MO");
+	string name = "Mosh, Hamedani";
+	//cout << name.find('A');
 
-	cout << name;
+	//if (name.find("Ham") == -1)
+	//	cout << "Doesn't exist";
+
+	cout << name.find_last_not_of(",.;");
+
 	return 0;
 
 }
