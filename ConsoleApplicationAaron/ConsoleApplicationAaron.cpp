@@ -5,11 +5,11 @@ using namespace std;
 
 
 int main() {
-	char ch = '\'';
-	string str = "\"Hello world\"";
 
-	//cout << str;
-	cout << ch;
+	string str = R"("c:\folderA\folderB\file.txt")";
+
+	cout << str;
+
 	return 0;
 
 }
