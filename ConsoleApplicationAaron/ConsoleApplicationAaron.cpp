@@ -14,8 +14,13 @@ struct Movie {
 int main() {
 
 	Movie movie = {"Terminator", 1984};
+	//string title = movie.title;
+	//int releaseYear = movie.releaseYear;
+	//bool isPopular = movie.isPopular;
 
-	cout << movie.releaseYear;
+	auto [title, releaseYear, isPopular] { movie };
+
+	cout << title;
 	
 
 	
