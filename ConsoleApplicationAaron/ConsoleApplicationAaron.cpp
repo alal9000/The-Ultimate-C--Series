@@ -1,5 +1,5 @@
 #include <iostream>
-#include <memory>
+#include <vector>
 
 using namespace std;
 
@@ -12,17 +12,14 @@ struct Movie {
 
 
 int main() {
-
-	Movie movie = {"Terminator", 1984};
-	//string title = movie.title;
-	//int releaseYear = movie.releaseYear;
-	//bool isPopular = movie.isPopular;
-
-	auto [title, releaseYear, isPopular] { movie };
-
-	cout << title;
+	vector<Movie> movies;
+	movies.push_back({ "Terminator 1", 1984 });
+	movies.push_back({ "Terminator 2", 1987 });
 	
+	//cout << movies[0].title;
 
+	for (auto& movie : movies)
+		cout << movie.title << endl;
 	
 
 	return 0;
