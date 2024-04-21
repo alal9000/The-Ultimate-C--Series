@@ -13,6 +13,17 @@ struct Movie {
 	string title;
 	Date releaseDate;
 	bool isPopular;
+
+	// Methods
+	bool equals(const Movie& movie) {
+		return (
+			title == movie.title &&
+			releaseDate.year == movie.releaseDate.year &&
+			releaseDate.month == movie.releaseDate.month &&
+			releaseDate.day == movie.releaseDate.day
+			);
+
+	}
 };
 
 
@@ -20,11 +31,7 @@ int main() {
 	Movie movie1 = { "Terminator", { 1984, 6, 1 } };
 	Movie movie2 = { "Terminator", { 1984, 6, 2 } };
 
-	if (movie1.title == movie2.title &&
-		movie1.releaseDate.year == movie2.releaseDate.year &&
-		movie1.releaseDate.month == movie2.releaseDate.month &&
-		movie1.releaseDate.day == movie2.releaseDate.day
-	)
+	if (movie1.equals(movie2))
 		cout << "Equal";
 
 
