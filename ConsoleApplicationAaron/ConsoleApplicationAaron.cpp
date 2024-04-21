@@ -5,12 +5,15 @@ using namespace std;
 
 
 int main() {
-	//unique_ptr<int> x(new int);
-	auto numbers = make_unique<int[]>(10);
-	auto y = make_unique<int>();
-	numbers[0] = 10;
-	cout << numbers[0];
+	auto x = make_shared<int>();
 	
+	*x = 10;
+	
+	shared_ptr<int> y(x);
+	if (x == y)
+		cout << "Equal";
+
+	cout << *y;
 
 	return 0;
 
