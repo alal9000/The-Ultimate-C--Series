@@ -3,19 +3,6 @@
 
 using namespace std;
 
-struct Address {
-	int zipcode;
-	string street;
-	string city;
-};
-
-struct Customer {
-	int id;
-	string name;
-	string email;
-	Address address;
-};
-
 struct Date {
 	short year = 1900;
 	short month = 1;
@@ -30,19 +17,16 @@ struct Movie {
 
 
 int main() {
-	//Movie movie{ "Terminator", { 1984, 6, 1 } };
-	//cout << movie.releaseDate.year;
+	Movie movie1 = { "Terminator", { 1984, 6, 1 } };
+	Movie movie2 = { "Terminator", { 1984, 6, 2 } };
 
-	// ex
+	if (movie1.title == movie2.title &&
+		movie1.releaseDate.year == movie2.releaseDate.year &&
+		movie1.releaseDate.month == movie2.releaseDate.month &&
+		movie1.releaseDate.day == movie2.releaseDate.day
+	)
+		cout << "Equal";
 
-	Customer customer = { 100, "mosh", "mosh@mosh.com", { 200641, "15 bigge street", "Melbourne"} };
-
-	cout << customer.id << endl;
-	cout << customer.name << endl;
-	cout << customer.email << endl;
-	cout << customer.address.city << endl;
-	cout << customer.address.zipcode << endl;
-	cout << customer.address.street << endl;
 
 	return 0;
 
