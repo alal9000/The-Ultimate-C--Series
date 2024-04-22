@@ -2,7 +2,13 @@
 
 using namespace std;
 
-enum Action {
+enum class Action {
+	List = 1,
+	Add = 2,
+	Update = 3
+};
+
+enum class Operation {
 	List = 1,
 	Add = 2,
 	Update = 3
@@ -22,7 +28,7 @@ int main() {
 	int input;
 	cin >> input;
 
-	if (input == Action::List) {
+	if (input == static_cast<int>(Action::List)) {
 		cout << "List invoices";
 
 	}
