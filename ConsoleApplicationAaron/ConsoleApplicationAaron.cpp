@@ -37,8 +37,8 @@ Movie getMovie() {
 	return { "Terminator", 1984 };
 }
 
-void showMovie(Movie& movie) {
-	cout << movie.title;
+void showMovie(Movie* movie) {
+	cout << movie->title;
 }
 
 
@@ -46,7 +46,7 @@ void showMovie(Movie& movie) {
 
 int main() {
 	auto movie = getMovie();
-	showMovie(movie);
+	showMovie(&movie);
 
 
 	return 0;
