@@ -1,41 +1,68 @@
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
-struct Date {
-	short year = 1900;
-	short month = 1;
-	short day = 1;
-};
+// ex my solution
+//bool isValid(string customerNumber) {
+//	bool valid = true;
+//
+//	if (customerNumber.length() != 6)
+//		return valid = false;
+//
+//
+//	for (int i = 0; i < 2; i++) {
+//		if (!isalpha(customerNumber[i]))
+//			return valid = false;
+//	}
+//
+//	for (int i = 2; i < 6; i++) {
+//		if (!isdigit(customerNumber[i]))
+//			return valid = false;
+//	}
+//
+//	return valid;
+//
+//}
 
-struct Movie {
-	string title;
-	Date releaseDate;
-	bool isPopular;
+// ex mosh solution
+bool isValid(string customerNumber) {
 
-	// Methods
-	bool equals(const Movie& movie) {
-		return (
-			title == movie.title &&
-			releaseDate.year == movie.releaseDate.year &&
-			releaseDate.month == movie.releaseDate.month &&
-			releaseDate.day == movie.releaseDate.day
-			);
+	if (customerNumber.length() != 6)
+		return false;
 
+	for (int i = 0; i < 2; i++) {
+		if (!isalpha(customerNumber[i]))
+			return false;
 	}
-};
+
+	for (int i = 2; i < customerNumber.length(); i++) {
+		if (!isdigit(customerNumber[i]))
+			return false;
+	}
+
+	return true;
+
+}
 
 
 int main() {
-	Movie movie1 = { "Terminator", { 1984, 6, 1 } };
-	Movie movie2 = { "Terminator", { 1984, 6, 2 } };
+	//string name = " Mosh Hamedani";
+	//cout << (char) toupper('a');
 
-	if (movie1.equals(movie2))
-		cout << "Equal";
+	//char input;
+	//if (tolower(input) == 'x')
+	//	break;
+
+	// ex
+
+	//bool result = isValid("AB1234");
+
+	//cout << boolalpha << result;
+
+	string customerNumber = "1B1234";
+	cout << isValid(customerNumber);
 
 
 	return 0;
 
 }
-
