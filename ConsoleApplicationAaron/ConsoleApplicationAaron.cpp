@@ -1,52 +1,32 @@
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
-struct Date {
-	short year = 1900;
-	short month = 1;
-	short day = 1;
+enum Action {
+	List = 1,
+	Add = 2,
+	Update = 3
 };
-
-struct Movie {
-	string title;
-	Date releaseDate;
-	bool isPopular;
-
-	// Methods
-
-};
-
-bool operator==(const Movie& first, const Movie& second) {
-	return (
-		first.title == second.title &&
-		first.releaseDate.year == second.releaseDate.year &&
-		first.releaseDate.month == second.releaseDate.month &&
-		first.releaseDate.day == second.releaseDate.day
-		);
-
-}
-
-ostream& operator<<(ostream& stream, const Movie& movie) {
-	stream << movie.title;
-	return stream;
-}
-
-Movie getMovie() {
-	return { "Terminator", 1984 };
-}
-
-void showMovie(Movie* movie) {
-	cout << movie->title;
-}
-
-
 
 
 int main() {
-	auto movie = getMovie();
-	showMovie(&movie);
+	//const int list = 1;
+	//const int add = 2;
+	//const int update = 3;
+	cout <<
+		"1: List invoices" << endl <<
+		"2: Add invoice" << endl <<
+		"3: Update invoices" << endl <<
+		"Select: ";
+
+	int input;
+	cin >> input;
+
+	if (input == Action::List) {
+		cout << "List invoices";
+
+	}
+
 
 
 	return 0;
