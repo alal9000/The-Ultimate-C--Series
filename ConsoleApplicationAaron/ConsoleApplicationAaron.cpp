@@ -1,22 +1,18 @@
+#include "Rectangle.h"
 #include <iostream>
-#include <sstream>
-#include <string>
 
 using namespace std;
 
 int main() {
-	string str = "10 20";
-	stringstream stream;
-	stream.str(str);
+	//Rectangle rectangle;
+	//rectangle.width = 10;
+	//rectangle.height = 20;
+	//cout << rectangle.getArea();
 
-	int first;
-	stream >> first;
-
-	int second;
-	stream >> second;
-
-	cout << first + second;
-
+	Rectangle first;
+	Rectangle second;
+	cout << &first << endl;
+	cout << &second << endl;
 
 
 	return 0;
