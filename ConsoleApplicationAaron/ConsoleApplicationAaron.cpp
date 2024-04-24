@@ -12,30 +12,14 @@ struct Movie {
 
 
 int main() {
-	ifstream file;
-	file.open("data.csv");
+	int numbers[] = { 1'000'000, 2'000'000, 3'000'000 };
+
+	ofstream file("numbers2.dat", ios::binary);
 	if (file.is_open()) {
-		string str;
-		getline(file, str);
-		while (!file.eof()) {
-		getline(file, str, ',');
-		if (str.empty()) continue;
-
-
-		Movie movie;
-		movie.id = stoi(str);
-
-		getline(file, str, ',');
-		movie.title = str;
-
-		getline(file, str);
-		movie.year = stoi(str);
-
-		cout << movie.title << endl;
-
-		}
+		file.write(reinterpret_cast<char*>(&numbers), sizeof(numbers));
 		file.close();
 	}
+
 
 
 	return 0;
