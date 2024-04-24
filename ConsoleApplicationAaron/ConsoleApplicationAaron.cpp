@@ -4,15 +4,9 @@
 using namespace std;
 
 int main() {
-	//Rectangle rectangle;
-	//rectangle.width = 10;
-	//rectangle.height = 20;
-	//cout << rectangle.getArea();
+	Rectangle rectangle;
+	rectangle.width = -1;
 
-	Rectangle first;
-	Rectangle second;
-	cout << &first << endl;
-	cout << &second << endl;
 
 
 	return 0;
