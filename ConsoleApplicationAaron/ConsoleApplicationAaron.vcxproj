@@ -130,9 +130,11 @@
   <ItemGroup>
     <ClCompile Include="ConsoleApplicationAaron.cpp" />
     <ClCompile Include="greet.cpp" />
+    <ClCompile Include="Rectangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="greet.hpp" />
+    <ClInclude Include="Rectangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

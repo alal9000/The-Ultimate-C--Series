@@ -1,15 +1,21 @@
 #include <iostream>
-#include <fstream>
+#include <sstream>
+#include <string>
 
 using namespace std;
 
 int main() {
-	fstream file;
-	file.open("file.txt", ios::in | ios::out | ios::app | ios::binary);
-	if (file.is_open()) {
-		file.close();
-	}
+	string str = "10 20";
+	stringstream stream;
+	stream.str(str);
 
+	int first;
+	stream >> first;
+
+	int second;
+	stream >> second;
+
+	cout << first + second;
 
 
 
