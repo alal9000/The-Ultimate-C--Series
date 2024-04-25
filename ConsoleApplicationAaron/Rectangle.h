@@ -7,6 +7,7 @@
 class Rectangle
 {
 public:
+	Rectangle(int width, int height);
 	void draw();
 	int getArea();
 	int getWidth(); // gettor
@@ -14,8 +15,8 @@ public:
 	int getHeight(); // gettor
 	void setHeight(int width); // setter
 private:
-	int width;
-	int height;
+	int width = 0;
+	int height = 0;
 
 };
 

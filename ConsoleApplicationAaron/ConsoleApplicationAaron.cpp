@@ -1,18 +1,12 @@
 #include "Rectangle.h"
-#include "TextBox.h"
 #include <iostream>
 
 using namespace std;
 
 int main() {
-	//Rectangle rectangle;
+	Rectangle rectangle{ -10, 20 };
 	//rectangle.setWidth(-1);
-
-	// ex - mine and mosh implementation
-	TextBox textbox;
-	textbox.setValue("Hello world");
-
-	cout << textbox.getValue();
+	cout << rectangle.getWidth();
 
 
 	return 0;
