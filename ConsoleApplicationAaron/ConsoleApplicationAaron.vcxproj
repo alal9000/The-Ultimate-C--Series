@@ -131,10 +131,12 @@
     <ClCompile Include="ConsoleApplicationAaron.cpp" />
     <ClCompile Include="greet.cpp" />
     <ClCompile Include="Rectangle.cpp" />
+    <ClCompile Include="TextBox.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="greet.hpp" />
     <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="TextBox.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

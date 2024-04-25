@@ -9,6 +9,10 @@ class Rectangle
 public:
 	void draw();
 	int getArea();
+	int getWidth(); // gettor
+	void setWidth(int width); // setter
+	int getHeight(); // gettor
+	void setHeight(int width); // setter
 private:
 	int width;
 	int height;
