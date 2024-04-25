@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-	Rectangle rectangle{ -10, 20 };
+	Rectangle rectangle;
 	//rectangle.setWidth(-1);
 	cout << rectangle.getWidth();
 

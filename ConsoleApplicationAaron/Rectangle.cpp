@@ -3,6 +3,7 @@
 
 using namespace std;
 
+
 Rectangle::Rectangle(int width, int height) : width{width}, height{ height }
 {
 	//cout << "Constructing a Rectangle" << endl;
