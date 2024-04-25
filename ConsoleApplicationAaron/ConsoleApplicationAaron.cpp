@@ -1,12 +1,21 @@
-#include "Rectangle.h"
+#include "Person.h"
+#include "TextBox.h"
 #include <iostream>
 
 using namespace std;
 
+void showPerson(Person person) {
+
+}
+
 int main() {
-	Rectangle rectangle;
-	//rectangle.setWidth(-1);
-	cout << rectangle.getWidth();
+	//Person person{ 20 };
+	//showPerson(person);
+
+	// ex my solution
+	TextBox box{ "Hello world" };
+
+	cout << box.getValue();
 
 
 	return 0;
