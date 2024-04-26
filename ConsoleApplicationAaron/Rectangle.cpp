@@ -25,6 +25,11 @@ Rectangle::Rectangle(int width, int height, const string& color) : Rectangle(wid
 	this->color = color;
 }
 
+Rectangle::~Rectangle()
+{
+	cout << "Destructor called" << endl;
+}
+
 void Rectangle::draw() {
 	cout << "Drawing a rectangle" << endl;
 	cout << "Dimensions: " << width << ", " << height << endl;

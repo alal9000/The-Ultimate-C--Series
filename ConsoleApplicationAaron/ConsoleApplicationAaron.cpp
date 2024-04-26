@@ -9,7 +9,7 @@ void showRectangle(Rectangle rectangle) {
 
 int main() {
 	Rectangle first{10, 20};
-	Rectangle second = first;
+	//Rectangle second = first;
 	//showRectangle(first);
 
 	return 0;
