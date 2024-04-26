@@ -9,9 +9,9 @@ void showRectangle(Rectangle rectangle) {
 
 int main() {
 	Rectangle first{10, 20};
-	//Rectangle second = first;
-	//showRectangle(first);
+	Rectangle second{10, 20};
 
+	cout << Rectangle::getObjectCount() << endl;
 	return 0;
 
 }

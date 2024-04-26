@@ -8,6 +8,7 @@ using namespace std;
 class Rectangle
 {
 public:
+	
 	Rectangle() = default;
 	Rectangle(const Rectangle& source) = delete;
 	Rectangle(int width, int height);
@@ -19,10 +20,14 @@ public:
 	void setWidth(int width); // setter
 	int getHeight(); // gettor
 	void setHeight(int width); // setter
+
+	static int getObjectCount();
 private:
 	int width = 0;
 	int height = 0;
 	string color;
+
+	static int objectsCount;
 
 };
 
