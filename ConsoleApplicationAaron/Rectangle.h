@@ -8,17 +8,18 @@ using namespace std;
 class Rectangle
 {
 public:
-	
 	Rectangle() = default;
 	Rectangle(const Rectangle& source) = delete;
 	Rectangle(int width, int height);
 	Rectangle(int width, int height, const string& color);
 	~Rectangle();
-	void draw();
-	int getArea();
-	int getWidth(); // gettor
+
+	void draw() const;
+	int getArea() const;
+	int getWidth() const; // gettor
+	int getHeight() const; // gettor
+
 	void setWidth(int width); // setter
-	int getHeight(); // gettor
 	void setHeight(int width); // setter
 
 	static int getObjectCount();

@@ -31,17 +31,17 @@ Rectangle::~Rectangle()
 	cout << "Destructor called" << endl;
 }
 
-void Rectangle::draw() {
+void Rectangle::draw() const {
 	cout << "Drawing a rectangle" << endl;
 	cout << "Dimensions: " << width << ", " << height << endl;
 }
 
-int Rectangle::getArea()
+int Rectangle::getArea() const
 {
 	return width * height;
 }
 
-int Rectangle::getWidth()
+int Rectangle::getWidth() const
 {
 	return width;
 }
@@ -53,7 +53,7 @@ void Rectangle::setWidth(int width)
 	this->width = width;
 }
 
-int Rectangle::getHeight() 
+int Rectangle::getHeight() const
 {
 	return height;
 }
