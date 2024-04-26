@@ -1,22 +1,16 @@
-#include "Person.h"
-#include "TextBox.h"
+#include "Rectangle.h"
 #include <iostream>
 
 using namespace std;
 
-void showPerson(Person person) {
+void showRectangle(Rectangle rectangle) {
 
 }
 
 int main() {
-	//Person person{ 20 };
-	//showPerson(person);
-
-	// ex my solution
-	TextBox box{ "Hello world" };
-
-	cout << box.getValue();
-
+	Rectangle first{10, 20};
+	Rectangle second = first;
+	//showRectangle(first);
 
 	return 0;
 

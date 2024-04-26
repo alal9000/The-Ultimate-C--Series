@@ -1,14 +1,17 @@
+#include <string>
 #pragma once
 #ifndef ADVANCED_RECTANGLE_H
 #define ADVANCED_RECTANGLE_H
 
-
+using namespace std;
 
 class Rectangle
 {
 public:
 	Rectangle() = default;
+	Rectangle(const Rectangle& source) = delete;
 	Rectangle(int width, int height);
+	Rectangle(int width, int height, const string& color);
 	void draw();
 	int getArea();
 	int getWidth(); // gettor
@@ -18,6 +21,7 @@ public:
 private:
 	int width = 0;
 	int height = 0;
+	string color;
 
 };
 

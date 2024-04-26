@@ -4,11 +4,25 @@
 using namespace std;
 
 
+//Rectangle::Rectangle(const Rectangle& source)
+//{
+//	cout << "Rectangle copied" << endl;
+//	this->width = source.width;
+//	this->height = source.height;
+//	this->color = source.color;
+//}
+
 Rectangle::Rectangle(int width, int height) : width{width}, height{ height }
 {
-	//cout << "Constructing a Rectangle" << endl;
-	//setWidth(width);
-	//setHeight(height);
+	cout << "Constructing a Rectangle" << endl;
+	setWidth(width);
+	setHeight(height);
+}
+
+Rectangle::Rectangle(int width, int height, const string& color) : Rectangle(width, height)
+{
+	cout << "Constructing a rectangle with color" << endl;
+	this->color = color;
 }
 
 void Rectangle::draw() {
