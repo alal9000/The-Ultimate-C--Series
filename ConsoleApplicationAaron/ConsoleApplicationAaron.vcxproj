@@ -132,12 +132,14 @@
     <ClCompile Include="greet.cpp" />
     <ClCompile Include="Person.cpp" />
     <ClCompile Include="Rectangle.cpp" />
+    <ClCompile Include="SmartPointer.cpp" />
     <ClCompile Include="TextBox.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="greet.hpp" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="SmartPointer.h" />
     <ClInclude Include="TextBox.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
