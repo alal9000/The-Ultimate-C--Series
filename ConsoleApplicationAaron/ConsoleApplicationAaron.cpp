@@ -1,19 +1,21 @@
-#include "Rectangle.h"
+#include "Length.h"
+#include "Point.h"
 #include <iostream>
 
 using namespace std;
 
 
 int main() {
-	Rectangle rectangles[] = {
-		{},
-		{10, 20},
-		{10, 20, "blue"}
-	};
-	rectangles[0].draw();
+	//Length first{ 10 };
+	//Length second{ 10 };
 
-	for (Rectangle& rect : rectangles)
-		rect.draw();
+	//if (first == 10)
+
+	Point first{ 10, 20 };
+	Point second{ 10, 21 };
+
+	cout << (first == second);
+
 
 
 	return 0;
