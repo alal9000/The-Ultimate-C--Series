@@ -11,6 +11,7 @@ int main() {
 
 	//if (first == 10)
 
+	// ex mine and mosh implementation
 	Point first{ 10, 20 };
 	Point second{ 10, 21 };
 
