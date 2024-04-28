@@ -1,5 +1,6 @@
 #include "Length.h"
 #include <ostream>
+#include <istream>
 using namespace std;
 
 Length::Length(int value) : value(value)
@@ -44,6 +45,14 @@ bool Length::operator>=(const Length& other) const
 ostream& operator<<(ostream& stream, Length& length)
 {
 	stream << length.getValue();
+	return stream;
+}
+
+istream& operator>>(istream& stream, Length& length)
+{
+	int value;
+	stream >> value;
+	length.setValue(value);
 	return stream;
 }
 

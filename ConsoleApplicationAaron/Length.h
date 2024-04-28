@@ -1,5 +1,8 @@
 #pragma once
 #include <ostream>
+#include <istream>
+
+using namespace std;
 class Length
 {
 public:
@@ -19,4 +22,5 @@ private:
 };
 
 
-ostream& operator<<(ostream&, const Length& length);
+ostream& operator<<(ostream& stream, const Length& length);
+istream& operator>>(istream& stream, Length& length);
