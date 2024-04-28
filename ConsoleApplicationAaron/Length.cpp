@@ -45,6 +45,7 @@ bool Length::operator>=(const Length& other) const
 ostream& operator<<(ostream& stream, Length& length)
 {
 	stream << length.getValue();
+	length.x;
 	return stream;
 }
 
