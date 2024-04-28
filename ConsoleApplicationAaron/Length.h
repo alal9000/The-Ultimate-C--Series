@@ -1,4 +1,5 @@
 #pragma once
+#include <ostream>
 class Length
 {
 public:
@@ -10,7 +11,12 @@ public:
 	bool operator<=(const Length& other) const;
 	bool operator>(const Length& other) const;
 	bool operator>=(const Length& other) const;
+
+	int getValue();
+	void setValue(int value);
 private:
 	int value;
 };
 
+
+ostream& operator<<(ostream&, const Length& length);

@@ -7,10 +7,8 @@ using namespace std;
 
 
 int main() {
-	int x = 10;
-	int y = 20;
-	auto result = x <=> y;
-	strong_order
+	Length length{ 10 };
+	cout << length;
 
 
 	return 0;
