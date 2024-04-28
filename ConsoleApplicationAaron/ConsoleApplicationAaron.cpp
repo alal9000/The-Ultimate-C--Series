@@ -1,16 +1,16 @@
 #include "Length.h"
-#include "Point.h"
 #include <iostream>
-#include <compare>
 
 using namespace std;
 
 
 int main() {
-	Length length{ 10 };
-	cout << "Length: ";
-	cin >> length;
-	cout << length;
+	Length first{ 10 };
+	Length second{ 10 };
+
+	Length third = first + second;
+
+	cout << third;
 
 
 	return 0;

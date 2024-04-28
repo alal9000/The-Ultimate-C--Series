@@ -42,12 +42,17 @@ bool Length::operator>=(const Length& other) const
 	return !(value < other.value);
 }
 
-ostream& operator<<(ostream& stream, Length& length)
+Length Length::operator+(const Length& other) const
+{
+	return Length(value + other.value);
+}
+
+ostream& operator<<(ostream& stream, const Length& length)
 {
 	stream << length.getValue();
-	length.x;
 	return stream;
 }
+
 
 istream& operator>>(istream& stream, Length& length)
 {
