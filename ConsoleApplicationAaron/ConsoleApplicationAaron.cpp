@@ -1,16 +1,16 @@
 #include "Length.h"
 #include "Point.h"
 #include <iostream>
+#include <compare>
 
 using namespace std;
 
 
 int main() {
-	Length first{ 10 };
-	Length second{ 10 };
-
-	if (first < second)
-
+	int x = 10;
+	int y = 20;
+	auto result = x <=> y;
+	strong_order
 
 
 	return 0;
