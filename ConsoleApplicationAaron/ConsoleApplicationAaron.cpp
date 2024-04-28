@@ -9,6 +9,7 @@ int main() {
 	Length second{ 10 };
 
 	Length third = first + second;
+	first += second;
 
 	cout << third;
 
