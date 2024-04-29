@@ -1,5 +1,6 @@
 #include "Length.h"
 #include <ostream>
+#include <iostream>
 #include <istream>
 using namespace std;
 
@@ -53,9 +54,16 @@ Length& Length::operator+=(const Length& other)
 	return *this;
 }
 
+//Length& Length::operator=(const Length& other)
+//{
+//	cout << "Object assigned" << endl;
+//	value = other.value;
+//	return *this;
+//}
+
 ostream& operator<<(ostream& stream, const Length& length)
 {
-	stream << length.getValue();
+	//stream << length.getValue();
 	return stream;
 }
 

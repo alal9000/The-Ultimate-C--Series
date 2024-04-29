@@ -8,10 +8,11 @@ int main() {
 	Length first{ 10 };
 	Length second{ 10 };
 
-	Length third = first + second;
-	first += second;
+	// copy constructor (new)
+	Length second = first;
 
-	cout << third;
+	// assingment operator (exisiting)
+	first = second;
 
 
 	return 0;
