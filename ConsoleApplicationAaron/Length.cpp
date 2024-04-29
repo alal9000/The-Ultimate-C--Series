@@ -67,6 +67,11 @@ Length Length::operator++(int)
 	return copy;
 }
 
+Length::operator int() const
+{
+	return value;
+}
+
 //Length& Length::operator=(const Length& other)
 //{
 //	cout << "Object assigned" << endl;

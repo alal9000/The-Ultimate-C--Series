@@ -21,6 +21,7 @@ public:
 	//Length& operator=(const Length& other) = delete;
 	Length& operator++(); // prefix
 	Length operator++(int); // postfix
+	explicit operator int() const;
 
 
 	int getValue();

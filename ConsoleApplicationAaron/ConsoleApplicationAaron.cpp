@@ -1,15 +1,14 @@
-#include "SmartPointer.h"
+#include "Length.h"
 #include <iostream>
 
 using namespace std;
 
 
 int main() {
-	SmartPointer ptr{ new int };
-	*ptr = 100;
-	cout << *ptr << endl;
-	*ptr = 101;
-	cout << *ptr;
+	Length length{ 10 };
+	int x = static_cast<int>(length);
+
+	cout << x;
 
 
 	return 0;
