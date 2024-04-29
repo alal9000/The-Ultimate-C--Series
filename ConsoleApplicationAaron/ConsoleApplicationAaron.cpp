@@ -1,15 +1,13 @@
-#include "Length.h"
+#include "Array.h"
 #include <iostream>
 
 using namespace std;
 
 
 int main() {
-	Length first{ 10 };
-	Length second = ++first;
-
-	cout << "First: " << first << endl;
-	cout << "Second: " << second << endl;
+	Array array{ 10 };
+	array[0] = 1;
+	cout << array[10];
 
 
 	return 0;
