@@ -6,13 +6,10 @@ using namespace std;
 
 int main() {
 	Length first{ 10 };
-	Length second{ 10 };
+	Length second = ++first;
 
-	// copy constructor (new)
-	Length second = first;
-
-	// assingment operator (exisiting)
-	first = second;
+	cout << "First: " << first << endl;
+	cout << "Second: " << second << endl;
 
 
 	return 0;

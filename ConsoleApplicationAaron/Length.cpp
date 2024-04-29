@@ -54,6 +54,19 @@ Length& Length::operator+=(const Length& other)
 	return *this;
 }
 
+Length& Length::operator++()
+{
+	value++;
+	return *this;
+}
+
+Length Length::operator++(int)
+{
+	Length copy = *this;
+	operator++();
+	return copy;
+}
+
 //Length& Length::operator=(const Length& other)
 //{
 //	cout << "Object assigned" << endl;
