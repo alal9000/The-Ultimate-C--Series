@@ -1,13 +1,15 @@
-#include "Array.h"
+#include "SmartPointer.h"
 #include <iostream>
 
 using namespace std;
 
 
 int main() {
-	Array array{ 10 };
-	array[0] = 1;
-	cout << array[10];
+	SmartPointer ptr{ new int };
+	*ptr = 100;
+	cout << *ptr << endl;
+	*ptr = 101;
+	cout << *ptr;
 
 
 	return 0;

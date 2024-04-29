@@ -10,6 +10,7 @@ public:
 	SmartPointer() = default;
 	explicit SmartPointer(int* ptr);
 	~SmartPointer();
+	int& operator*();
 
 	int* getPtr() const;
 	void setWidth(int* ptr);

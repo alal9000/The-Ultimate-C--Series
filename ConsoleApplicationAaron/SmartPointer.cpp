@@ -11,6 +11,11 @@ SmartPointer::~SmartPointer()
 	ptr = nullptr;
 }
 
+int& SmartPointer::operator*()
+{
+	return *ptr;
+}
+
 int* SmartPointer::getPtr() const
 {
 	return ptr;
