@@ -3,10 +3,15 @@
 
 using namespace std;
 
-Widget::Widget(bool enabled) : enabled{enabled}
-{
-	cout << "Widget constructed" << endl;
-}
+//Widget::Widget(bool enabled) : enabled{enabled}
+//{
+//	cout << "Widget constructed" << endl;
+//}
+
+//Widget::~Widget()
+//{
+//	cout << "Widget destructed" << endl;
+//}
 
 void Widget::enable()
 {

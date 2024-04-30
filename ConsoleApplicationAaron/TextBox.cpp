@@ -8,9 +8,14 @@ using namespace std;
 //	cout << "TextBox constructed" << endl;
 //}
 
-TextBox::TextBox(bool enabled, const string& value) : Widget(enabled), value{value}
-{
-}
+//TextBox::TextBox(bool enabled, const string& value) : Widget(enabled), value{value}
+//{
+//}
+
+//TextBox::~TextBox()
+//{
+//	cout << "TextBox destructed" << endl;
+//}
 
 string TextBox::getValue()
 {

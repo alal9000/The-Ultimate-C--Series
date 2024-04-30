@@ -11,8 +11,9 @@ class TextBox : public Widget
 {
 public:
 	//TextBox(bool enabled);
-	using Widget::Widget;
-	explicit TextBox(bool enabled, const string& value);
+	//using Widget::Widget;
+	//explicit TextBox(bool enabled, const string& value);
+	//~TextBox();
 	string getValue();
 	void setValue(const string& value);
 
