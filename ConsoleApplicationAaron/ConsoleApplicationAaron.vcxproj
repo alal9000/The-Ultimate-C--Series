@@ -129,6 +129,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Array.cpp" />
+    <ClCompile Include="CheckBox.cpp" />
     <ClCompile Include="ConsoleApplicationAaron.cpp" />
     <ClCompile Include="greet.cpp" />
     <ClCompile Include="Length.cpp" />
@@ -141,6 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />
+    <ClInclude Include="CheckBox.h" />
     <ClInclude Include="greet.hpp" />
     <ClInclude Include="Length.h" />
     <ClInclude Include="Person.h" />
