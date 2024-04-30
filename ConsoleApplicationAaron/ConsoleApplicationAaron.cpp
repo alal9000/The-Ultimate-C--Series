@@ -4,10 +4,15 @@
 
 using namespace std;
 
+void showWidget(Widget* widget) {
+	widget->
+}
+
 
 int main() {
 	TextBox box;
-
+	//Widget widget = box;
+	showWidget(&box);
 
 
 	return 0;
