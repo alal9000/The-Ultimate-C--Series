@@ -6,6 +6,10 @@ TextBox::TextBox(const string& value) : value{value}
 
 string TextBox::getValue()
 {
+	// protected OK
+	this->width;
+	// private NO
+	this.enabled;
 	return value;
 }
 
