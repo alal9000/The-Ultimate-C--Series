@@ -1,12 +1,13 @@
-#include "Length.h"
+#include "Textbox.h"
 #include <iostream>
 
 using namespace std;
 
 
 int main() {
-	Length length{ 10 };
-	length.getValue();
+	TextBox box;
+	box.disable();
+	cout << box.isEnabled();
 
 
 	return 0;

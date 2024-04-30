@@ -1,12 +1,13 @@
 #include <iostream>
 #include <string>
+#include "Widget.h"
 #pragma once
 #ifndef ADVANCED_TEXTBOX_H
 #define ADVANCED_TEXTBOX_H
 
 using namespace std;
 
-class TextBox
+class TextBox : public Widget
 {
 public:
 	TextBox() = default;
