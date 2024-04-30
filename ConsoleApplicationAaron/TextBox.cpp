@@ -17,6 +17,11 @@ using namespace std;
 //	cout << "TextBox destructed" << endl;
 //}
 
+void TextBox::draw() const
+{
+	cout << "Drawing a TextBox" << endl;
+}
+
 string TextBox::getValue()
 {
 	// protected OK

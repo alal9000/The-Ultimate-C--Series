@@ -10,10 +10,8 @@ using namespace std;
 class TextBox : public Widget
 {
 public:
-	//TextBox(bool enabled);
-	//using Widget::Widget;
-	//explicit TextBox(bool enabled, const string& value);
-	//~TextBox();
+	// Overriding
+	void draw() const override;
 	string getValue();
 	void setValue(const string& value);
 

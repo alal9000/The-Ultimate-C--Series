@@ -13,6 +13,11 @@ using namespace std;
 //	cout << "Widget destructed" << endl;
 //}
 
+void Widget::draw() const
+{
+	cout << "Drawing a widget" << endl;
+}
+
 void Widget::enable()
 {
 	enabled = true;
