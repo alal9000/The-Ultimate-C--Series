@@ -95,7 +95,7 @@ istream& operator>>(istream& stream, Length& length)
 }
 
 
-int Length::getValue() {
+inline int Length::getValue() {
 	return value;
 }
 
