@@ -2,6 +2,8 @@
 class Widget
 {
 public:
+	//Widget() = default;
+	Widget(bool enabled);
 	void enable();
 	void disable();
 	bool isEnabled() const;

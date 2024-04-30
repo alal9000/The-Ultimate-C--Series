@@ -10,8 +10,9 @@ using namespace std;
 class TextBox : public Widget
 {
 public:
-	TextBox() = default;
-	explicit TextBox(const string& value);
+	//TextBox(bool enabled);
+	using Widget::Widget;
+	explicit TextBox(bool enabled, const string& value);
 	string getValue();
 	void setValue(const string& value);
 
