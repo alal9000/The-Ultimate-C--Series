@@ -1,40 +1,26 @@
 #include <iostream>
-#include "Rectangle.h"
-#include "ConsoleApplicationAaron.h"
+#include "AccountLocked.h"
 
 
 
 using namespace std;
 
-void createRectangle() {
-	try
-	{
-		Rectangle rect;
-		rect.setWidth(-1);
-
-	}
-	catch (const invalid_argument& ex)
-	{
-		cout << "Close the file" << endl;
-		throw;
-	}
-}
-
-void doWork() {
-	createRectangle();
+void login() {
+	throw AccountLocked{};
 }
 
 
 int main() {
 	try
 	{
+		login();
 
-		doWork();
 	}
 	catch (const exception& ex)
-	{
+	{ 
 		cout << ex.what();
 	}
+
 
 	return 0;
 
