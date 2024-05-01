@@ -7,12 +7,12 @@
 
 using namespace std;
 
-class TextBox : public Widget
+class TextBox final : public Widget
 {
 public:
 	// Overriding
 	~TextBox();
-	void draw() const override;
+	void draw() const override final;
 	string getValue();
 	void setValue(const string& value);
 
