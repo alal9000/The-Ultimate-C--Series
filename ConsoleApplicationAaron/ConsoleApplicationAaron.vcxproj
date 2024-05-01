@@ -131,6 +131,9 @@
     <ClCompile Include="Array.cpp" />
     <ClCompile Include="CheckBox.cpp" />
     <ClCompile Include="ConsoleApplicationAaron.cpp" />
+    <ClCompile Include="FileIO.cpp" />
+    <ClCompile Include="FileReader.cpp" />
+    <ClCompile Include="FileWriter.cpp" />
     <ClCompile Include="greet.cpp" />
     <ClCompile Include="Length.cpp" />
     <ClCompile Include="MaskedTextBox.cpp" />
@@ -144,6 +147,9 @@
   <ItemGroup>
     <ClInclude Include="Array.h" />
     <ClInclude Include="CheckBox.h" />
+    <ClInclude Include="FileIO.h" />
+    <ClInclude Include="FileReader.h" />
+    <ClInclude Include="FileWriter.h" />
     <ClInclude Include="greet.hpp" />
     <ClInclude Include="Length.h" />
     <ClInclude Include="MaskedTextBox.h" />
