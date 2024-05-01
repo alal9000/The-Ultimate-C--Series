@@ -26,10 +26,10 @@ Rectangle::Rectangle(int width, int height, const string& color) : Rectangle(wid
 	this->color = color;
 }
 
-Rectangle::~Rectangle()
-{
-	cout << "Destructor called" << endl;
-}
+//Rectangle::~Rectangle()
+//{
+//	cout << "Destructor called" << endl;
+//}
 
 void Rectangle::draw() const {
 	cout << "Drawing a rectangle" << endl;
@@ -49,7 +49,7 @@ int Rectangle::getWidth() const
 void Rectangle::setWidth(int width)
 {
 	if (width < 0)
-		throw invalid_argument("width");
+		throw invalid_argument("The width cannot be negative");
 	this->width = width;
 }
 

@@ -12,7 +12,7 @@ public:
 	//Rectangle(const Rectangle& source) = delete;
 	Rectangle(int width, int height);
 	Rectangle(int width, int height, const string& color);
-	~Rectangle();
+	//~Rectangle();
 
 	void draw() const;
 	int getArea() const;
