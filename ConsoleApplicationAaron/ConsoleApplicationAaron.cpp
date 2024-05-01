@@ -14,11 +14,6 @@ void showWidget(Widget& widget) {
 
 
 int main() {
-	//TextBox box;
-	//showWidget(box);
-
-	//CheckBox checkbox;
-	//showWidget(checkbox);
 	vector<unique_ptr<Widget>> widgets;
 
 	widgets.push_back(make_unique<TextBox>());
