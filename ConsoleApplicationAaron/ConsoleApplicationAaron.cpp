@@ -7,8 +7,17 @@
 using namespace std;
 
 void createRectangle() {
-	Rectangle rect;
-	rect.setWidth(-1);
+	try
+	{
+		Rectangle rect;
+		rect.setWidth(-1);
+
+	}
+	catch (const invalid_argument& ex)
+	{
+		cout << "Close the file" << endl;
+		throw;
+	}
 }
 
 void doWork() {
