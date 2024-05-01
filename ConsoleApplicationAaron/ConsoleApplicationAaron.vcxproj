@@ -147,6 +147,7 @@
   <ItemGroup>
     <ClInclude Include="Array.h" />
     <ClInclude Include="CheckBox.h" />
+    <ClInclude Include="ConsoleApplicationAaron.h" />
     <ClInclude Include="FileIO.h" />
     <ClInclude Include="FileReader.h" />
     <ClInclude Include="FileWriter.h" />

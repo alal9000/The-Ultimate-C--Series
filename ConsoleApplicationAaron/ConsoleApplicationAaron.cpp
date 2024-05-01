@@ -1,37 +1,31 @@
 #include <iostream>
 #include "Rectangle.h"
+#include "ConsoleApplicationAaron.h"
 
 
 
 using namespace std;
 
+void createRectangle() {
+	Rectangle rect;
+	rect.setWidth(-1);
+}
+
+void doWork() {
+	createRectangle();
+}
+
 
 int main() {
 	try
 	{
-		cout << "Width: ";
-		int width;
-		cin >> width;
 
-		Rectangle rect;
-		rect.setWidth(width);
-
-		cout << "Done";
-
+		doWork();
 	}
-	catch (const out_of_range& ex)
+	catch (const exception& ex)
 	{
 		cout << ex.what();
-
 	}
-	catch (const logic_error& ex)
-	{
-		cout << ex.what();
-
-	}
-	
-
-	cout << "End of program";
 
 	return 0;
 
