@@ -10,5 +10,10 @@ class CheckBox : public Widget
 	{
 		cout << "Drawing a CheckBox" << endl;
 	}
+
+	//~CheckBox()
+	//{
+	//	cout << "Destructing a CheckBox" << endl;
+	//}
 };
 

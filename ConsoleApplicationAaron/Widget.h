@@ -4,7 +4,7 @@ class Widget
 public:
 	//Widget() = default;
 	//Widget(bool enabled);
-	//~Widget();
+	virtual ~Widget() = default;
 	virtual void draw() const;
 	void enable();
 	void disable();

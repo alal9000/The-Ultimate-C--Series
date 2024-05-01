@@ -17,6 +17,11 @@ using namespace std;
 //	cout << "TextBox destructed" << endl;
 //}
 
+TextBox::~TextBox()
+{
+	cout << "Destructing a TextBox" << endl;
+}
+
 void TextBox::draw() const
 {
 	cout << "Drawing a TextBox" << endl;

@@ -11,6 +11,7 @@ class TextBox : public Widget
 {
 public:
 	// Overriding
+	~TextBox();
 	void draw() const override;
 	string getValue();
 	void setValue(const string& value);
