@@ -1,0 +1,771 @@
+-C++ standard library: collection of pre-written C++ that provides functionality that is required by many apps.
+-just like a supermarket has different sections, the standard library has different files all serving a different purpose 
+-statements tell the operating system what to do
+-two parts to learning C++: the C++ language itself and then the C++ standard library
+-C++ is one of the most fastest and efficient programming languages out there - it is used to build performance critical apps that is fast and use memory efficiently
+-machine code is the native language the computers operating system understands and its different from one OS to another
+-when you compile your code, you will get a platform specific executable ie: .exe for windows and no extension for mac
+-patience is the first skill of a good programmer
+-we return 0 to say the program completed successfully, any other value ie: 1 it means the program encounterd errors, its like a sentitent value or error code
+-std is a namespace which represents our current imports form the standard library
+-std is like a bucket or container (namespace) which allows us to access objects form the files that we import at the top ie: #include <iostream>. cout is one such object declaration in the std namespace and by inlcuding #include <iostream> at the top we can access that object
+-declarations introduces a name into a program and specifies its type but it doesnt nessesarily allocate memory or provide a full definition of the entity
+-in programming a stream represents a sequence of characters
+-the angle brackets >> are the are the stream extraction operator and << is the stream insertion operator
+-we use variables to temporarily store data in the computers memory
+-the STL or standard template library consists of several files each containing functions for differnt purposes - to use the functions in the STL we should include the corresponding files using the #include directive
+-using comments we can explain what cannot be expressed in code.  This includees whys and hows and any assumptions
+-cout is an object that represents the standard output stream (which is the console in a console app)
+-IDE: editor for writing code as well as build and debugging tools
+-a statement tells the operating system what to do, whenever we type a statement we should terminate it with a semicolon
+-encountering errors is a normal part of programming and is just an opportunity for learning.
+-in programming we use variables to temporarily store data in the computers memory - technically a variable is the name of a location in memory where we can store some value, because the location can change we refer to the location as a variable
+-in languages like C# and java ints automatically get initialized to zero but not in C++
+-if we are dividing two ints the result of the division is going to be an int, even though in reality it might be a floating point number ie: int x = 10; int y = 3 int z = x / y; here z will be 3. - to get a float we make the return value type a float (ie: double z ) and one of the operands a float
+-if we apply the increment or decrement operator as a prefix, then the ++ or -- operation runs and then the value is copied over, if the ++ or -- is a postfix then the value is copied over first and then the operand is incremented / decremented
+-for monetry values we should always use a double
+-the way we should write code: write a bit of code, run it make sure everything works before going further. Baby steps
+-stream extraction operator >> - use this for reading input from the user. Easiest way to remember >> and << is in data flow ie: cin >> value - we read data from the console an put it into value variable, cout is opposite ie: cout << "Enter a value: "; - here string label is output to console
+-the division or multiplication for two ints the result will always be an int and any fractional parts will get truncated - we need to do some implicit or explict type casting in certain situations to make sure we are getting correct results.
+-cout is an object that represents the standard output stream: in programming a stream represents a sequence of characters. Standard output is the console or terminal window - so using cout we can write a sequence of characters on the console
+-<< is the stream insertion operator - its an operator for inserting something to our output stream. We can also chain multiple stream insertion operators ie: std::cout << "x = " << x;
+-for implicit casting the compiler will automatically promote the less precise type to the more precise type.
+-its more conventional for comments to go above lines rather than beside it - use comments sparringly as your code becomes harder to understand and maintain - use comments for whys and hows, not whats 
+-fundamental data types: numbers, booleans, strings, characters and arrays
+-C++ is a statically typed language which means, when declaring a variable we need to specify its type and that type cannot change during the lifetime of the program, other statically typed languages are C#, java, TS etc. In contrast Python and JS are dynamically typed, where we dont have to declare the type, it will be infered automattically at runtime based on the value assigned and this type can change during the lifetime of our program.
+-int takes 4 bytes (generally speaking but can vary based on system) range: -2Billion to 2Billion
+-short takes 2 bytes range: -32,768 to 32,768
+-long is the same as int in terms of bytes and range
+-long long is 8 bytes and has a really large range and is only really used for programs that involve complicated mathmatical computations
+-double 8 bytes range: -1.7E308 to 1.7E308
+-float 4 bytes range: -3.4E38 to 3.4E38
+-long double 8 bytes range: -3.4E932 to 3.4E932
+-most of the time we use double because the float type can result in loss of accuracy (especailly for monetry values)
+-bool (range: true / false) and char both take one byte
+-when we declare a float be sure to postfix the value with an F ie: float interestRate = 3.67F; - this is because by default the compiler treats our value as a double and it tries to fit a double value inside a float variable and this can potentially lead to data loss. So when working with float values always type an F at the end. It can be upper or lowercase. The same concept applies for long or long long. Postfix with L and LL respectively as the compiler will treat the number as an interger and lowercase l looks like a one.
+-we can use the auto keyword to let the compiler infer the type of our variables, its like the var keyword in C# ie: auto isValid = false;
+-we can also initialize variables in c++ with brace initialization
+-decimal - base10, binary - base2, hexadecimal - base16. We can use hex to shorten binary numbers ie: 11111111 = FF
+-we can directly work with binary values in cpp by prefixing with 0b ie: int number = 0b11111111; - we can represent the same number in hex by prefixing with 0x
+-we should generally stay away from the unsigned keyword as it can introduce bugs, its supposed to restrict negative values in your program
+-narrowing: initialize a variable of a smaller type using a larger type ie: int number = 1'000'000; short another = number; - the opposite is not an issue ie: short number = 100; int another = number; - if we store a smaller number in a larger memory space we are not going to encounter data loss
+-unsigned removes the negative numbers and increase the positive number limit.
+-try to save system resources where you can ie: computers memory - ie: by storing smaller numbers in a short rather than a int
+-& is the 'adress of' operator so int x = 5; cout << &x; will print the memory address of x in hex ie: 000000E09333FA64
+-int x = 5; int* y = &x; this second line says y is an int pointer which holds the address of the integer x. The value inside y will be a memory address in hex format
+-int x = 5; int* y = &x; cout << *y; *y here is the dereference operator which says: go to the address stored in y and access the value there, so the third line will print 5.
+-int* y and *y are not the same expressions even though they both use asterisk, one is an int pointer the other a dereference operator
+-narrowing in cpp can result in data loss - the data loss is only one way however going from a big type and converting to a smaller type, however going from a small type to a bigger type will not be an issue and cause no data loss
+
+-in dynamically typed languages, the type can change throughout the lifetime of the program, while they cant for statically typed languages
+-we usually use doubles for decimals because the float type can result in a loss of accuracy
+
+-by default the comiler will treat whole numbers as ints and decimal values as doubles so we should postfix the value with L for longs and F for floats if we want to use those types
+-we can think of classes as building blocks of our programs
+
+-when we have overflowing a number wraps back around to the minimum possible value it can store, the same goes for underflowing in the other direction
+
+-signed and non signed types mean if it is negative or not
+
+-sticky stream manipulators will be in effect untill we turn it off
+
+-when we read in strings from the terminal, i the string has a space then the space and everything after it will be ignored
+
+-the common best practice these days is to declare a variable close to its usage - this makes our code easier to read and understand
+
+-hexidecimal numbers start with 0x
+
+-the last index of an array is equvilent to the size of the array - 1
+
+-in cpp our program will compile even if access out of bounds elements in an array - so its different to other languages and has less safety
+
+-to get an index of an element in an array you minus its place in the array by 1. ie: the index of the third element is 2 - conversley if you add 1 to the index, you can get the place in the array of the element at that index. ie: index 2 + 1 means the item at index 2 is in the third place
+
+-when initializing arrays and we have all the values we dont have to specify the size, we can let the compiler infer the size. If we dont have all the initial values but want to reserve enough space to store all the elements, then we have to specify the size
+
+-casting: converting data from one type to another
+
+-implicit type conversion will occur when a mathmatical expression has operands with different types. The type that has less precisicon or space will be promoted to the type that has more precision to limit data loss. When the operands have the same types then the expression will be evaluated
+
+-c++ casting ie: int z = x + static_cast<int>(y); is safer than c style casting ie: int z = x + (int)y; - ie: we will get a compile time error instead of runtime error so we can catch bugs before we run our code and avoid potential errors while our program is running. We use C++ casting primarily in C++
+
+-when we do a mathmatical operation on an expression then the result of the expression will be the same type of the operands in the expression
+
+-safety in a programming context refers to avoiding undefined behaviour and introducing bugs into your programs
+
+-floating point numbers are interpreted as double by default
+
+-whole numbers are interpreted as int by default
+
+-arbitrary: not based on any specific rule or constraints
+
+-numbers can be represented using the decimal, binary or hexidecimal systems
+
+-if we store a value larger or smaller than a data types limits, then overflowing or underflowing can occur
+
+-we can use stream manipulators to format data sent to a stream. The most common are setw, setprecision, boolalpha, left and right
+
+-use single quotes for chars and double quotes for strings
+
+-if the operands in a mathmatical expression are different then the less precise operand will get promoted to the more precise before the operation will occur - this is known as implicit type conversion. - The type of the variable returned should be the same type of the final operands to get the most accurate result 
+
+-when storing a smaller value in a larger data type, the value gets automatically cast to the larger type. When storing a large value in a smaller data type, we have to explictly cast the value - but we should never do this because of the potential for data loss
+
+-when comparing values of different types, the compiler will automatically cast or convert values from smaller or less precise types to larger and more precise types, then do the comparison operation
+
+-we use logical operators for combining two or more boolean expressions (conditions)
+
+-when we have multiple logical operators in an expression we should use parethesis to seperate the different stories as it makes our code easier to read
+
+-order of logical operators matters and is: ! > && > || - we can always override the order using parethesis
+
+-if one condition on either side of the && operator evaluates to false then the entire expression will evaluate to false
+
+-its best to avoid more than two levels of nesting for if statements if possible
+
+-with switch statments we can only compare variables with certain values, so we can't use boolean expressions as conditions  ie: we can't do: switch (number < 10) {} - we only have an equality comparison
+
+-we use a switch statement to compare a variable with a set of values - in terms of functionality they are not as flexible as if statements
+
+-we use if statements to control the logic and flow of our programs
+do the end of type conversion and check gpt for testing of conversions
+
+-with logical operators we can combine boolean expressions and represent more complex conditions
+
+-using the conditional operator we can simplify an if / else statement
+
+-we use the for loop for repeating a set of instructions
+
+-while loops do not have their own loop variable, we have to declare it outside the loop
+
+- a variable is only accesible in the block in which its declared
+
+-the continue keyword will skip an iteration
+
+-we often use the break keyword for infinite loops
+
+-we have four types of loops in cpp, for, range based for (for each), while and do-while
+
+-for each loops are great when iterating over a list of items ie: an arrat 
+
+-whenever you try to solve a problem always try an simplify it first and do it step by step, this is always easier
+
+-we should always code parameters with a default value after parameters without a default value - parameters with a default value should always come after parameters without a default value
+
+-signature of a function: name + (number and type of parameters)
+
+-overloading functions: create functions with the same name but different parameters. When overloading functions each function should have a unique signature
+
+-overloading a function means creating another variation with a different signature. By overloading functions we can call our functions in different ways
+
+-the parameters of a function is like a local variable of that function
+
+-by default arguments are passed by value in cpp
+
+-reference parameter: references an existing variable - we postfix the type with ampersand ie: double increasePrice(double& price) {...//} - we can use this to pass arguments by reference
+
+-if we deal with arguments that deal with large amounts of data we can improve the efficiency of our programs by passing arguments by reference
+
+-we can declare reference parameters as const for safety so we dont accidently modify the underlying variable
+
+-global variables are declared outside of all functions so they are accesible to all functions
+
+-global variables can lead to programming problems because different functions can change them and its hard to track how their values get changed throughout the lifetime of the program and can result in unexpected behaviour. So for the most part we should avoid using global variables - one exception is dealing with global constants because functions cannot change them
+
+-function declarations and function prototypes are the same thing ie: void greet(string name); - they can be used if you want to define your functions after the main function, so there is a difference between declaring and defining a function
+
+-a namespace is like a bucket that we put our functions inside and with this we can prevent name conflicts ie: what if we write out own greet function and someone else has already written a greet function and we import both of them. We prevent name collisions in our programs by using namespaces
+
+-for the most part we can import entire namespaces atop our file, but if we run into conflicts then we can import specific functions and objects from a namespace instead
+
+-a function is a group of one or more statements that perform a task. Each function should have a clear responsibility. It should do one thing and only one thing
+
+-arguments of a function can be passed by value or reference. When passed by value they get copied to the parameters of the function
+
+-a header file ends with .h or .hpp and consists of function declarations and constants. We can import header files using the include directive
+
+PART 2:
+
+-we wont get compile time errors when we index out of bounds values for our arrays in cpp, just garbage values will be shown
+
+
+
+-the best way to get the size of an array is to use the size function ie: size(numbers)
+
+-we cannot initialize an array using another array in cpp, we have to use brace initializer syntax - if we want to copy an array we have to loop over it and copy each element seperately
+
+-whenever we need to pass an array to a function, we should always include its size as well. ie: void printNumbers(int numbers[], int size) {}
+
+-size_t is a data type defined in the standard library used to representing the size of objects - its guarenteed to be large enough to contain the size of the largest object the system can handle
+
+-signed values can be negative or positive, unsigned can only be positive (0 or more)
+
+-size_t is a type just like int but it can hold larger values. size_t values are always positive so they can store larger values. Basically size_t is an unsigned long long, its just a data type for representing the largest size possible on the current system
+
+-structured binding is the same as destructuring or unpacking in javascript and python respectively
+
+-a pointer is a variable that stores the memory address of another variable
+
+-a variable is just a label for a memory address
+
+-why we use pointers: 1. efficiently passing large objects between our functions 2. dynamic memory allocation. We can allow our programs to adjust their memory useage depending on the input 3. enable polymorphism
+
+-the ampersnad is the address-of operator and used to get a memory address of a variable ie: &number
+
+-as a best practice we should always initialize our pointers ie: int* ptr = &number or int* ptr = nullptr because if we dont we may access a part of the memory that we are not supposed to and in that case the OS would terminate our program and say memory access violation. If we dont have a variable to initialize to we can initialize it as a nullptr - this is a pointer that doesnt point to anything
+
+-with the dereferencing operator (*) we can access the value at the pointer location ie: *ptr
+
+-pointers and constants - there are x3 scenarios: 1. data is constant but pointer is not 2. pointer is constant, but data is not 3. both data and pointers are constant
+
+-we can't have an int pointer point to a constant int, if the value is a const int then the pointer should also be a const int ie: const int x = 10; const int* ptr = &x; - in this scenario our data is a constant but the pointer is not, so we can have our pointer point to a different variable in the future
+
+-when declaring constant pointers we should always initialize them, because later on we cannot re-assign it
+
+-if we need to pass some large data to a function, we often want to pass by reference not value because this copying operation is often costly. In this situation in modern cpp its better to use reference parameters instead of pointers but you might see the pointers method if you are working on an old code base
+
+-usually for swapping two variables around you need a third variable
+
+-an array variable is technically a pointer to the first element of that array ie: the compiler will treat this argument as an int pointer - void printNumbers(int numbers[]) {}
+
+-function parameters that are arrays are passed by reference - this is done for efficiency because we dont want to copy over all the elements in the array when passing it between functions - this is why the cpp compiler always passes arrays using a pointer
+
+-when we increment a pointer its going to be increased by the size of its data type - because thats logically the next number of bytes over. 
+
+- in most moden computers a memory address usually represents a single byte of memory
+
+-addition and subtraction are the only arithmetic we can perform on pointers
+
+-a magic value in programming is a literal value that appears without explanation or context in code
+
+-anything over 3d arrays is impractical
+
+-we dont need to pass the size of the array if we are passing a multi dimensional array to a function
+
+-an array is a collection of items stored in sequence
+
+-array parameters are interpreted as pointers (memory addresses)
+
+-as a best practice, whenever we want to use a pointer we should make sure its not a null pointer
+
+-dynamic memory allocation helps in situations such as getting input from the user and reading data from a file
+
+-variables declared on the stack get automatic cleanup - once they go out of scope the memory that was allocated to them gets released automatically
+
+-when we declare a variable on the heap using the new operator, we programmers are responsible for the cleanup or releasing that memory
+
+-if we dont release memory we allocate on the heap, then our program will end up consuming more and more memory and eventually its going to crash - in this situation we say our program has a memory leak. This means it is constantly consuming more and more memory
+
+- we use the delete operator to deallocate memory
+
+-the new operator will allocate memory on the heap, even a single int
+
+-the new operator will return a pointer to the dynamically allocated memory
+
+-dynamically allocated memory: allocation and deallocation of memory at runtime
+
+-static memory allocation: allocation and deallocation of memory at compile time
+
+-dynamically allocated memory done on the heap using the new operator while static memory allocation is done on the stack and the system takes care of allocating and cleaning up memory
+
+-dynamic in programming: behaviours or characteristics that are determined or can change at runtime ie: memory allocation and typing
+
+-static in programming: behaviours or characteristics that are fixed or determined at compile time ie: memory allocation and typing
+-we can use pointers to allocate memory dynamically
+
+-heap is the bigger area of memory, stack is smaller - best way to remember is with the heap there is heaps
+
+
+-while not mandatory its a good idea to reset a pointer (to nullptr) after you are done using it
+
+-a C string is a special type of character array which is different to the cpp string type. Its generally something we should avoid because c style string is fixed, so we might waste memory or not have enough memory to fit a long name while cpp string type adjusts its memory useage dynamically.
+
+-the last element of a c style string should always be the null terminator character ie: \0 - this character denotes the end of a string
+-literal is a fancy computer science term for value
+
+-string literal is a sequence of characters enclosed in double quotation marks
+-character literal is a single letter enclosed in single quotes
+-char * is a character pointer, which is just a character array because arrays are represented as a pointer to their first element
+
+-whenever we use the new operator to allocate memory on the heap we should always remember to deallocate the memory using the Delete operator - if we dont do so the memory that we allocated will not be available for reuse in the future - as we allocate more memeory our program will consume more and more memory and eventually it will run out of memory and crash, this is what we call a memory leak, which means it is constantly consuming more and more memeory
+
+-we should not delete our pointers twice otherwise our program will crash
+
+-smart pointers in modern cpp frees us from having to delete these pointers and they are the preferred way of working with pointers
+
+-We have two types of smart pointers: unique and shared
+
+-unique pointers: a kind of pointer that owns the piece of memory it points to, so we cannot have two unique pointers pointing to the same memory location, for that we have to use a shared pointer. Most of the time we work with unique pointers
+
+-we cannot perform any arithmetic operations on a smart pointer
+
+-shared pointers: we can have two pointers pointing to the same memory location
+
+-using the dereference operator (*) we can get the content of a memory address stored in a pointer
+
+-a null pointer is a pointer that doesn't point to any objects
+
+-local variables are stored on the stack and auto released when they go out of scope, in contrast we can allocate memory on the heap with the new keyword but we need to deallocate it after useage with the delete keyword unless we are using smart pointers which auto delete
+
+-generic classes can work with different data types
+
+-utility functions are often re-useable and generic and are designed to perform common tasks
+
+-with structures we can define custom "data types" in computer science we call these abstract data types (ADT) or abstractions which basically means a general model of something
+
+-with structures we can put all related variables inside a container. That means we dont have to pass so many individual arguments to our functions, we can just pass the structure instead
+
+-whenever we create an instance of a struct, its always a good idea to initialize its members, as just like uninitialized variables it will hold junk values
+
+-the default value for strings within a struct is an empty string, and for booleans it is false, so we dont have to set it explicity if we dont want
+
+-when unpacking a struct we cannot leave out any members, they are all mandatory ie: auto [title, releaseYear, isPopular] { movie };
+
+-its not preferable to use fixed size arrays because we can waste memory for spots that are not filled or conversley run out of space. Instead we should use the vector class in the STL which implements a dynamic array adn thats the preferred way to store a list of objects
+
+-using the dot operator we can access the members of nested structures
+
+-the order in how you define your structs matter, you dont want to use a struct before it has been defined
+
+-the equality operator is not defined for structs so you will get a compile time error, instead we need to compare each member individually
+
+-repetative code is harder to maintain - ie: we have to make changes in mulitple places instead of just one
+
+-in cpp structs can have functions unlike c
+
+-a method is a function that is part of an object. It can be an instance of a struct or class
+
+-operator overloading: change the implementation of a operator to change the way it behaves
+
+-we cannot use the stream insertion operator to print an object (class or struct instance) it is only designed to work with the basic built in types like int, string, char, double etc - we can however overload the operator to make it do so
+
+-we can type the const keyword at the end of the method declaration to make sure the current object is not modifed as part of a method
+
+-some operators can only be implemented (overloaded) outside of a struct
+
+-in a broader sense, an object refers to any entity (ie: data structure) that encapsulates data and behaviour but in OOP it refers to class instances
+
+-we should make sure we are testing every edge case scenario when testing our code
+
+-whenever we want to pass objects around its always better to use reference params as opposed to pointers because its safer and simpiler. But we should know how to pass via pointers because a lot of codebases use this technique
+
+-structure pointer operator: -> - what this does is it dereferences the pointer to its left and gives us access to its members on its right
+
+-another way to create a custom type is using an enumeration
+
+-enumerations: we can combine related constants into a single unit - this unit will be a data type that we can use just like other data types. When we list members inside an enum the compiler will assign each member a numeric value starting at 0, although we can assign values to the members explictly
+
+-enumerations are a type that represents a bunch of related constants which each having a numerical value
+
+-with classic enums in cpp we cannot have duplicate enum members but to solve this we can use strongly typed enums, we just postfix the enum keyword with the class keyword. Note that with the strongly typed enums, implict casting to the target integer doesn't happen and we have to explictly cast it ie: if (input == static_cast<int>(Action::List)) {}
+
+-enumerators are the members inside enums
+
+-we can think of a stream as a data source or destination
+
+-classes are more capable structs
+
+-cout represents the standard output stream and in console apps the standard out stream is the console or terminal 
+
+-a buffer is a temporary storage in memory for reading values
+
+-if parameters have a default value they are optional
+
+-benefits of creating reuseable functions: we are not repeating patterns and our code is simpler and easier to maintain
+
+-streams in cpp is characters going in or out
+
+-a stream is an abstraction for a data source or destination. Using streams we can read / write data to a variety of places (terminal, files, network, db) in the same way
+
+-a buffer is a temporary storage in memory for reading / writing data to streams
+
+-invalid data (error effected) will stay in the buffer - here we should flush the buffer before reuse through the clear and ignore methods
+
+-binary files store data the same way it is stored in memory, as 1s and 0s
+
+-using string streams we can convert data to a string and vice versa
+
+
+
+-all stream classes share a common base so they have the same interface
+
+-always remember to close a file otherwise it wont be accessible in other programs
+
+-input: reading and output: writing
+
+-there are two ways to store data in files: text files and binary files (images, audio files, PDFs)
+
+-understanding the format of a binary file is crucial for correctly interpreting its contents
+
+-when we are dealing with a lot of numbers its more efficient to store these numbers in a binary file as they take up less space than their text based equivilents
+
+-if my machine has a 64 bit architecture it means its CPU and RAM is capable of handling data in 64 bit chunks
+
+-data bus is the physical pathway or set of wires that allows for the transfer of data between various components of the computer system such as the CPU, memory and input/output devices
+
+-data is stored in memory in sequences of 1s and 0s or in binary
+
+-parsing a string: extracting pieces of information from a string. ie: convert it from a string to a int
+
+-programming paradigm: style of programming ie: procedural, functional, object oriented, event driven. Functional and oop are the most popular
+
+-a wise software engineer uses the right tools for the right job
+
+finish operator overloading exercises
+
+-object (oop): a software entity that has attributes (properties) and functions (methods)
+
+-class: blueprint for creating objects
+
+-difference between structures and classes: structs are more about data while classes are data + behviour together
+
+-the functions in a class (methods) operate on the classes data
+
+-double colons (::) is the scope resolution operator and it allows us to access namespaces throughout our program
+
+-namespaces are like a container to protect against naming collisions
+
+-when we include files from the standard library we use angle brackets ie: <> but when we use inlcude files from our project we use double quotes ""
+
+-in cpp we have two files per class to reduce the compilation time
+
+-the main difference between classes and structs. In structs the members are always public by default but with classes the members are private by default
+
+-when our objects store bad data we say they go in an invalid state
+
+-the state of an object is the data stored in it
+
+-data hiding: a class should hide its internal data from the outside code and provide functions for accessing the data
+
+-exceptions are a way to report errors in our programs
+
+-a pointer is a special variable that holds the memory address of another variable
+
+-whenever we have a string parameter, its always best to declare it as a reference parameter so the values are not copied accross function calls - this is for performance reasons
+
+-inside a class variables should be private and functions public
+
+-mutually exclusive means events cannot occur simulateneously
+
+-a default constructor is a constructor with no parameters
+
+-just like functions we can also overload constructors
+
+-the cpp compiler automatically generates a default constructor for every class unless we provide a constructor - so the moment we define a constructor, the compiler stops generating a default constructor for us
+
+-in cpp we refer to a constructor with a single parameter, that doesnt have the explicit keyword as a converting constructor - implicit conversion can happen from the compiler if you pass a value and that value will initialize the ratget object. If we prefix the explicit keyword then it no longer becomes a converting constructor
+
+-a constructor can delegate the initialization of an object to another constructor, with this we can remove duplicate code
+
+-the copy constructor is a special kind of constructor used for copying objects
+
+-destructors are automatically called when our objects are being destroyed - this is an opportunity for us to free system resources that an object is using
+
+-destructors have no params and we cannot overload them
+
+-instances have their own copy of class members but we can have members that belong to the class itself which are called static members which have a single copy of these members in memory, and that single copy will be shared by all instances
+
+-static members should also be initialized in our implementation file
+
+-we can only access static members in static functions
+
+-we can also declare objects as constants - when this happens the compiler makes all the attributes of that object constant (read-only) too
+
+-objects on the stack will automatically get cleaned up (memory freed) when objects go out of scope ie: objects declared inside the main function will go out of scope when the main finishes execution, so thats when the object destructor is called
+
+-objects on the stack are useful when they are local to a function, so we dont need them outside of a function but sometimes we need an object to stay in memory after an object finishes execution, in those cases we need to create that object on the heap using the new operator. Afterwards we have to remember to free up the memory allocated by using the delete operator on the pointer and then reset the pointer, setting the pointer to nullptr (avoid dangling pointer). For this reason when we allocate objects on the heap we should use smart pointers to auto free up the memory
+
+-if we have a pointer to an object we can use the arrow operator on it to access its members ie: rectangle->draw();
+
+-dangling pointer: a pointer that is pointing to a memory address that doesn't exist anymore
+
+-we often use structures as simple data containers and classes for creating objects that can do things
+
+-data hiding: objects should protect their state and provide functions for accessing the state (gettors and setters)
+
+-default constructor: a constructor with zero parameters
+
+-destructors will automatically release system resources like memory and file handles
+
+-we should only pass by reference our custom types because primitives are small and there is not performance gain by passing by reference
+
+-spaceship operator: <=> - less than, equal to and greater than operators in one
+
+-in modern cpp to compare objects, we only need to overload two operators, the equality and spaceship operators, a modern cpp compiler can generate the other operators for us (not equal, greater, less than)
+
+-a friend of a class can access all the private members of a class
+
+- += is the compound assignment operator
+
+-unary operators: first++ - one operand
+
+-binary operators: first + second - two operands
+
+-subscript operator: square brackets
+
+-often size_t translates to unsigned int or unsigned long long which is the largest size the system can handle
+
+-when we allocate memory dynamically in the constructor we should release it in the destructor
+
+-we should only declare functions as inline for small functions that dont change preferably one liners. This is because the call to the function will be replaced by the number of lines it has and if there is more than one it can increase the size of the executable which can effect performance so dont blindly make all your functions inline. Mosh recommends to generally stay away from this technique though because modern compilers will automatically decide for you whether to declare functions inline or not
+
+-by overloading the built in operators we can make them work with our custom types
+
+-inheritance is a mechanism for reusing code
+
+-we should mark methods as constant inside a class if they do not change the state of an object
+
+-within inheritance we can create new classes by reusing and expanding on existing classes
+
+-protected is another access modifier: they are similar to private in the sense they are only accessible within class, but they are also available to derived classes whereas private they are not - we generally use only public and private and use protected on a case by case basis when we need to access members in derived classes - aside from this we should stay away from protected members
+
+-in inheritance, the base class constructor is called before the derived class constructor
+
+-derived classes do not inherit the base class constructors by default we have to set this explicitly ie: using Widget::Widget;
+
+-in inheritance, the destructors are called in the reverse order, so destructors of derived classes are called before the base class
+
+-when we do a type conversion torward the base class it is called upcasting, when we do it towards the derived class it is called downcasting but it is illigal. Upcasting also happens implicitly when we pass a child object to a function that has a parent parameter
+
+-object slicing: data loss as part of upcasting - object slicing doesn't happen if we use a reference or a pointer
+
+-to override methods in the child class we use the virtual keyword in the parent class, ie: virtual void draw() const;
+
+-if we have a method that might be changed in derived classes then we should override them, not redefine them
+
+-if we have methods that are likely to change in derived classes, then we should declare them using the virtual keyword and in the dervied classes we should use the override keyword with them
+
+-extensibility in software design: design software in a way that allows for the addition of new features, components or functionality with minimal effort and without disrupting existing code
+
+-polymorphism allows us to build apps that are easily extended (extensible software) - it means an object can take many different forms
+
+-static or early binding: the compiler matches a function call with the proper definition of that function at compile time
+
+-dynamic or late binding (runtime polymorphism): the compiler matches a function call with the actual type of object being referenced or pointed to at runtime
+
+-polymorphic collection: each object in this collection can take a different form at runtime
+
+-anytime we declare a method in a class as virtual that means we are going to use polymorphism at some point, which means we should always declare a virtual destrucor in that class aswell. This is because we need to make sure our objects are destroyed properly when using polymorphism
+
+-if we have a virtual method and there is no meaningful way to define that method, that is where we can use an abstract class. So a method can be declared simply to be overridden in its child class 
+
+-if a class has at least one pure virtual method (abstract method) then we refer to that class as abstract - abstract classes cannot be instantiated and we cannot use them as function parameters - abstract classes exist purely to be inherited
+
+-if we dont override pure virtual methods in child classes, the child class will be abstract aswell
+
+-we use the final keyword when we want to prevent a method from being overridden in a derived class
+
+-we can also declare a class as final, so we can cannot make child classes from this class
+
+-we achieve polymorphic behaviour through inheritance, so the two concepts are tied
+
+-difference between building and compiling: compiling translates source code to machine code 1s and 0s, while building is the entire process of transforming our source code into a final executable file. Building contains some tasks that are not in the compilation step such as resolving dependancies and linking individual compiled files into a single executable
+
+-try to limit inheritance to maxium of three levels
+
+-mulitple inheritance: a class can have multiple base classes - we shouldn't use this technique that often because we can often create complex inheritance heirarchies
+
+-child classes do not inherit the constructors and destructors of the parent class
+
+-polymorphism happens when we pass a child object to a function that expects an object of the base class ie: the function expects a Widget object but we pass a TextBox object to it.
+
+-overidding a function enables polymorphism because it allows the compiler to determine which function to call at runtime. This is known as dynamic or late binding.
+
+-deployong cpp apps requires recompilation which is an extra step that intrepreted languages dont have to worry about
+
+-final methods cannot be overidden
+
+-final classes cannot be inherited
+
+-object slicing can happen when we implicitly convert a child to a parent class
+
+-exception: an object to report an error while our program is running
+
+-by using parethesis on a class we can call the constructor of that class
+
+-the code we put in a catch block should never throw an exception because there is no catch blocks there to catch further exceptions. So our code there should be safe and free of exceptions
+
+-with inheritance: a parent object can always hold child objects - in other words a child object can implicitly be converted to a parent object
+
+-we should order our catch blocks from the most specific to the most generic ones to make sure the execptions are handled in the right order
+
+-call stack: shows our functions calls in the reverse order
+
+-often we use the try / catch block in the main function instead of handling those errors locally within their own functions where they occur so we have a single place where they are being handled. We would need to use the generic exceptions classes because of this. When the error occurs in its local function we could handle it there but often we want to propagate it up the call stack, but it depends on the app your building. If we are using system resources like file handles or memory, then we should handle the exception locally to close out the file / free the memory then rethrow the exception and notify the main exception handler so a friendly error message can be displayed, this is called rethrowing an exception and it is done through the throw keyword.
+
+-when an exception is thrown the runtime looks for a catch block throughout the call stack. If no catch block is found the program crashes
+
+-in a real app we often want to log our exceptions somewhere, either a db or logfile. So later on we can look at our log file and see what exceptions and errors occured
+
+-our custom exceptions should inherit from the main exception class in the standard library so we can catch exceptions of our custom type in a centralized exception handler in the main function
+
+-code that may throw an exception goes in the try block and how its handled goes in the catch block
+
+-templates in cpp are like generics in other languages - ie: we can define functions in a flexible way so it can work with any data type
+
+-the benefits of templates is we have less code to maintain and the size of our executable or application can be smaller
+
+-when using templates, most of the time the compiler can deduce the type of T
+
+-a generic type argument goes inside angled brackets for function templates or generics
+
+-the limitations with class templates is the method definitions have to be in same file as the class
+
+-inline constructor: the function is generated in-place
+
+=======================================================================================================================================================================
+
+working with characters
+========================
+
+#include <iostream>
+
+using namespace std;
+
+bool isValid(string customerNumber) {
+	bool valid = true;
+
+	if (customerNumber.length() != 6)
+		 return valid = false;
+
+
+	for (int i = 0; i < 2; i++) {
+		if (!isalpha(customerNumber[i]))
+			valid = false;
+	}
+
+	for (int i = 2; i < 6; i++) {
+		if (!isdigit(customerNumber[i]))
+			valid = false;
+	}
+
+	return valid;
+	
+}
+
+
+int main() {
+	//string name = " Mosh Hamedani";
+	//cout << (char) toupper('a');
+
+	//char input;
+	//if (tolower(input) == 'x')
+	//	break;
+
+	// ex
+	
+	bool result = isValid("By");
+
+	cout << boolalpha << result;
+	
+
+	return 0;
+
+}
+
+
+=============================================================================================================================================================
+
+operator overloading
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+struct Date {
+	short year = 1900;
+	short month = 1;
+	short day = 1;
+};
+
+struct Movie {
+	string title;
+	Date releaseDate;
+	bool isPopular;
+
+	// Methods
+	
+};
+
+bool operator==(const Movie& first, const Movie& second) {
+	return (
+		first.title == second.title &&
+		first.releaseDate.year == second.releaseDate.year &&
+		first.releaseDate.month == second.releaseDate.month &&
+		first.releaseDate.day == second.releaseDate.day
+		);
+
+}
+
+ostream& operator<<(ostream& stream, const Movie& movie) {
+	stream << movie.title;
+	return stream;
+}
+
+
+
+
+int main() {
+	Movie movie1 = { "Terminator", { 1984, 6, 1 } };
+	Movie movie2 = { "Terminator", { 1984, 6, 1 } };
+
+
+		cout << movie1;
+
+
+	return 0;
+
+}
+
+=============================================================================================================================================================
+converting values to strings
+
+#include <iostream>
+#include <sstream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+int main() {
+	double number = 12.34;
+	stringstream stream;
+	stream << fixed << setprecision(1) << number;
+	string str = stream.str();
+	cout << str;
+
+
+	return 0;
+
+}
+
+
+====================================================================================================================================================================
+
+parsing strings
+
+#include <iostream>
+#include <sstream>
+#include <string>
+
+using namespace std;
+
+int main() {
+	string str = "10 20";
+	stringstream stream;
+	stream.str(str);
+
+	int first;
+	stream >> first;
+
+	int second;
+	stream >> second;
+
+	cout << first + second;
+
+
+
+	return 0;
+
+}
