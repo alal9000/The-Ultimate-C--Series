@@ -6,13 +6,16 @@ using namespace std;
 template<typename K, typename V>
 class Pair
 {
+public:
+	Pair() = default;
+	Pair(K key, V value);
+
+	K getKey();
+	V getValue();
+
 private:
 	K key;
 	V value;
-public:
-	Pair(K key, V value);
-	K getKey();
-	V getValue();
 };
 
 template<typename K, typename V>
