@@ -11,10 +11,11 @@ T larger(T first, T second) {
 
 
 int main() {
+	make_unique<int>()
 	
-	larger(1.1, 2.2);
-	larger(1, 2);
-	larger('a', 'b');
+	auto result = larger<double>(1, 2.1);
+	//larger(1, 2);
+	//larger('a', 'b');
 	return 0;
 
 }
