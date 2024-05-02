@@ -8,14 +8,16 @@ T larger(T first, T second) {
 	return (first > second) ? first : second;
 }
 
+template<typename K, typename V>
+void display(K key, V value) {
+	cout << key << "=" << value << endl;
+}
+
 
 
 int main() {
-	make_unique<int>()
-	
-	auto result = larger<double>(1, 2.1);
-	//larger(1, 2);
-	//larger('a', 'b');
+	display("A", 1);
+	display(1, 1);
 	return 0;
 
 }
