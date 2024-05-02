@@ -138,6 +138,7 @@
     <ClCompile Include="greet.cpp" />
     <ClCompile Include="Length.cpp" />
     <ClCompile Include="MaskedTextBox.cpp" />
+    <ClCompile Include="Pair.cpp" />
     <ClCompile Include="Person.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Rectangle.cpp" />
@@ -156,6 +157,7 @@
     <ClInclude Include="greet.hpp" />
     <ClInclude Include="Length.h" />
     <ClInclude Include="MaskedTextBox.h" />
+    <ClInclude Include="Pair.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Rectangle.h" />
