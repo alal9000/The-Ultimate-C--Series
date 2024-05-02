@@ -1,27 +1,20 @@
 #include <iostream>
 #include "AccountLocked.h"
 
-
-
 using namespace std;
 
-void login() {
-	throw AccountLocked{};
+template<typename T>
+T larger(T first, T second) {
+	return (first > second) ? first : second;
 }
 
 
+
 int main() {
-	try
-	{
-		login();
-
-	}
-	catch (const exception& ex)
-	{ 
-		cout << ex.what();
-	}
-
-
+	
+	larger(1.1, 2.2);
+	larger(1, 2);
+	larger('a', 'b');
 	return 0;
 
 }
